@@ -1,0 +1,44 @@
+"""
+ARM emulator.
+
+Parse commands
+load filename
+   determine format
+   read in img or elf file
+   allocate memory
+   set up registers
+   set pc
+cmd line   gui keys
+start      F5
+stop   cntrl-F5
+set bkpt  
+  b addr   F9
+clr bkpt
+  d addr
+stepi      F7
+stepi over F6
+regs
+r1,    pc  prints in hex
+reg = value
+addr:x
+memory = value
+log commands
+read commands from a file
+some sort of I/o emulation
+--
+gui equivalent - instr display, reg display, data display, command entry
+buttons
+
+File  Debug  Display  Help
+Load  Start  Regs
+Exit  Stop   Memory
+      si
+      so
+      b
+      clr
+---   
+
+
+
+
+"""

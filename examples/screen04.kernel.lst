@@ -1,0 +1,557 @@
+
+build/output.elf:     file format elf32-littlearm
+
+
+Disassembly of section .init:
+
+00000000 <_start>:
+   0:	ea0020ce 	b	8340 <main>
+
+Disassembly of section .text:
+
+00008000 <SetForeColour>:
+    8000:	e3500801 	cmp	r0, #65536	; 0x10000
+    8004:	81a0f00e 	movhi	pc, lr
+    8008:	01a0f00e 	moveq	pc, lr
+    800c:	e59f11b4 	ldr	r1, [pc, #436]	; 81c8 <stringLoopEnd$+0x4>
+    8010:	e1c100b0 	strh	r0, [r1]
+    8014:	e1a0f00e 	mov	pc, lr
+
+00008018 <SetGraphicsAddress>:
+    8018:	e59f11ac 	ldr	r1, [pc, #428]	; 81cc <stringLoopEnd$+0x8>
+    801c:	e5810000 	str	r0, [r1]
+    8020:	e1a0f00e 	mov	pc, lr
+
+00008024 <DrawPixel>:
+    8024:	e59f21a0 	ldr	r2, [pc, #416]	; 81cc <stringLoopEnd$+0x8>
+    8028:	e5922000 	ldr	r2, [r2]
+    802c:	e5923004 	ldr	r3, [r2, #4]
+    8030:	e2433001 	sub	r3, r3, #1
+    8034:	e1510003 	cmp	r1, r3
+    8038:	81a0f00e 	movhi	pc, lr
+    803c:	e5923000 	ldr	r3, [r2]
+    8040:	e2433001 	sub	r3, r3, #1
+    8044:	e1500003 	cmp	r0, r3
+    8048:	81a0f00e 	movhi	pc, lr
+    804c:	e5922020 	ldr	r2, [r2, #32]
+    8050:	e2833001 	add	r3, r3, #1
+    8054:	e0200391 	mla	r0, r1, r3, r0
+    8058:	e0822080 	add	r2, r2, r0, lsl #1
+    805c:	e59f3164 	ldr	r3, [pc, #356]	; 81c8 <stringLoopEnd$+0x4>
+    8060:	e1d330b0 	ldrh	r3, [r3]
+    8064:	e1c230b0 	strh	r3, [r2]
+    8068:	e1a0f00e 	mov	pc, lr
+
+0000806c <DrawLine>:
+    806c:	e92d5ff0 	push	{r4, r5, r6, r7, r8, r9, sl, fp, ip, lr}
+    8070:	e1a09000 	mov	r9, r0
+    8074:	e1a0a002 	mov	sl, r2
+    8078:	e1a0b001 	mov	fp, r1
+    807c:	e1a0c003 	mov	ip, r3
+    8080:	e159000a 	cmp	r9, sl
+    8084:	c049400a 	subgt	r4, r9, sl
+    8088:	c3e06000 	mvngt	r6, #0
+    808c:	d04a4009 	suble	r4, sl, r9
+    8090:	d3a06001 	movle	r6, #1
+    8094:	e15b000c 	cmp	fp, ip
+    8098:	c04c500b 	subgt	r5, ip, fp
+    809c:	c3e07000 	mvngt	r7, #0
+    80a0:	d04b500c 	suble	r5, fp, ip
+    80a4:	d3a07001 	movle	r7, #1
+    80a8:	e0848005 	add	r8, r4, r5
+    80ac:	e08aa006 	add	sl, sl, r6
+    80b0:	e08cc007 	add	ip, ip, r7
+
+000080b4 <pixelLoop$>:
+    80b4:	e139000a 	teq	r9, sl
+    80b8:	113b000c 	teqne	fp, ip
+    80bc:	08bd9ff0 	popeq	{r4, r5, r6, r7, r8, r9, sl, fp, ip, pc}
+    80c0:	e1a00009 	mov	r0, r9
+    80c4:	e1a0100b 	mov	r1, fp
+    80c8:	ebffffd5 	bl	8024 <DrawPixel>
+    80cc:	e1550088 	cmp	r5, r8, lsl #1
+    80d0:	d0888005 	addle	r8, r8, r5
+    80d4:	d0899006 	addle	r9, r9, r6
+    80d8:	e1540088 	cmp	r4, r8, lsl #1
+    80dc:	a0888004 	addge	r8, r8, r4
+    80e0:	a08bb007 	addge	fp, fp, r7
+    80e4:	eafffff2 	b	80b4 <pixelLoop$>
+
+000080e8 <DrawCharacter>:
+    80e8:	e350007f 	cmp	r0, #127	; 0x7f
+    80ec:	83a00000 	movhi	r0, #0
+    80f0:	83a01000 	movhi	r1, #0
+    80f4:	81a0f00e 	movhi	pc, lr
+    80f8:	e1a04001 	mov	r4, r1
+    80fc:	e1a05002 	mov	r5, r2
+    8100:	e92d41f0 	push	{r4, r5, r6, r7, r8, lr}
+    8104:	e59f60c4 	ldr	r6, [pc, #196]	; 81d0 <stringLoopEnd$+0xc>
+    8108:	e0866200 	add	r6, r6, r0, lsl #4
+
+0000810c <lineLoop$>:
+    810c:	e5d67000 	ldrb	r7, [r6]
+    8110:	e3a08008 	mov	r8, #8
+
+00008114 <charPixelLoop$>:
+    8114:	e2588001 	subs	r8, r8, #1
+    8118:	ba000006 	blt	8138 <charPixelLoopEnd$>
+    811c:	e1a07087 	lsl	r7, r7, #1
+    8120:	e3170c01 	tst	r7, #256	; 0x100
+    8124:	0afffffa 	beq	8114 <charPixelLoop$>
+    8128:	e0840008 	add	r0, r4, r8
+    812c:	e1a01005 	mov	r1, r5
+    8130:	ebffffbb 	bl	8024 <DrawPixel>
+    8134:	eafffff6 	b	8114 <charPixelLoop$>
+
+00008138 <charPixelLoopEnd$>:
+    8138:	e2855001 	add	r5, r5, #1
+    813c:	e2866001 	add	r6, r6, #1
+    8140:	e316000f 	tst	r6, #15
+    8144:	1afffff0 	bne	810c <lineLoop$>
+    8148:	e3a00008 	mov	r0, #8
+    814c:	e3a01010 	mov	r1, #16
+    8150:	e8bd81f0 	pop	{r4, r5, r6, r7, r8, pc}
+
+00008154 <DrawString>:
+    8154:	e92d43f0 	push	{r4, r5, r6, r7, r8, r9, lr}
+    8158:	e1a07000 	mov	r7, r0
+    815c:	e1a04002 	mov	r4, r2
+    8160:	e1a06004 	mov	r6, r4
+    8164:	e1a05003 	mov	r5, r3
+    8168:	e1a08001 	mov	r8, r1
+
+0000816c <stringLoop$>:
+    816c:	e2588001 	subs	r8, r8, #1
+    8170:	ba000013 	blt	81c4 <stringLoopEnd$>
+    8174:	e5d79000 	ldrb	r9, [r7]
+    8178:	e2877001 	add	r7, r7, #1
+    817c:	e1a00009 	mov	r0, r9
+    8180:	e1a01004 	mov	r1, r4
+    8184:	e1a02005 	mov	r2, r5
+    8188:	ebffffd6 	bl	80e8 <DrawCharacter>
+    818c:	e339000a 	teq	r9, #10
+    8190:	01a04006 	moveq	r4, r6
+    8194:	00855001 	addeq	r5, r5, r1
+    8198:	0afffff3 	beq	816c <stringLoop$>
+    819c:	e3390009 	teq	r9, #9
+    81a0:	10844000 	addne	r4, r4, r0
+    81a4:	1afffff0 	bne	816c <stringLoop$>
+    81a8:	e0800100 	add	r0, r0, r0, lsl #2
+    81ac:	e1a01006 	mov	r1, r6
+
+000081b0 <stringLoopTab$>:
+    81b0:	e0811000 	add	r1, r1, r0
+    81b4:	e1540001 	cmp	r4, r1
+    81b8:	aafffffc 	bge	81b0 <stringLoopTab$>
+    81bc:	e1a04001 	mov	r4, r1
+    81c0:	eaffffe9 	b	816c <stringLoop$>
+
+000081c4 <stringLoopEnd$>:
+    81c4:	e8bd83f0 	pop	{r4, r5, r6, r7, r8, r9, pc}
+    81c8:	00009000 	.word	0x00009000
+    81cc:	00009004 	.word	0x00009004
+    81d0:	00009010 	.word	0x00009010
+
+000081d4 <InitialiseFrameBuffer>:
+    81d4:	e3500a01 	cmp	r0, #4096	; 0x1000
+    81d8:	93510a01 	cmpls	r1, #4096	; 0x1000
+    81dc:	93520020 	cmpls	r2, #32
+    81e0:	83a00000 	movhi	r0, #0
+    81e4:	81a0f00e 	movhi	pc, lr
+    81e8:	e92d4010 	push	{r4, lr}
+    81ec:	e59f4044 	ldr	r4, [pc, #68]	; 8238 <pointerWait$+0x14>
+    81f0:	e5840000 	str	r0, [r4]
+    81f4:	e5841004 	str	r1, [r4, #4]
+    81f8:	e5840008 	str	r0, [r4, #8]
+    81fc:	e584100c 	str	r1, [r4, #12]
+    8200:	e5842014 	str	r2, [r4, #20]
+    8204:	e1a00004 	mov	r0, r4
+    8208:	e3a01001 	mov	r1, #1
+    820c:	eb00003f 	bl	8310 <MailboxWrite>
+    8210:	e3a00001 	mov	r0, #1
+    8214:	eb000030 	bl	82dc <MailboxRead>
+    8218:	e3300000 	teq	r0, #0
+    821c:	13a00000 	movne	r0, #0
+    8220:	18bd8010 	popne	{r4, pc}
+
+00008224 <pointerWait$>:
+    8224:	e5940020 	ldr	r0, [r4, #32]
+    8228:	e3300000 	teq	r0, #0
+    822c:	0afffffc 	beq	8224 <pointerWait$>
+    8230:	e1a00004 	mov	r0, r4
+    8234:	e8bd8010 	pop	{r4, pc}
+    8238:	0000a000 	.word	0x0000a000
+
+0000823c <GetGpioAddress>:
+    823c:	e59f008c 	ldr	r0, [pc, #140]	; 82d0 <SetGpio+0x3c>
+    8240:	e1a0f00e 	mov	pc, lr
+
+00008244 <SetGpioFunction>:
+    8244:	e3500035 	cmp	r0, #53	; 0x35
+    8248:	93510007 	cmpls	r1, #7
+    824c:	81a0f00e 	movhi	pc, lr
+    8250:	e92d4000 	push	{lr}
+    8254:	e1a02000 	mov	r2, r0
+    8258:	ebfffff7 	bl	823c <GetGpioAddress>
+
+0000825c <functionLoop$>:
+    825c:	e3520009 	cmp	r2, #9
+    8260:	8242200a 	subhi	r2, r2, #10
+    8264:	82800004 	addhi	r0, r0, #4
+    8268:	8afffffb 	bhi	825c <functionLoop$>
+    826c:	e0822082 	add	r2, r2, r2, lsl #1
+    8270:	e1a01211 	lsl	r1, r1, r2
+    8274:	e3a03007 	mov	r3, #7
+    8278:	e1a03213 	lsl	r3, r3, r2
+    827c:	e1e03003 	mvn	r3, r3
+    8280:	e5902000 	ldr	r2, [r0]
+    8284:	e0022003 	and	r2, r2, r3
+    8288:	e1811002 	orr	r1, r1, r2
+    828c:	e5801000 	str	r1, [r0]
+    8290:	e8bd8000 	pop	{pc}
+
+00008294 <SetGpio>:
+    8294:	e3500035 	cmp	r0, #53	; 0x35
+    8298:	81a0f00e 	movhi	pc, lr
+    829c:	e92d4000 	push	{lr}
+    82a0:	e1a02000 	mov	r2, r0
+    82a4:	ebffffe4 	bl	823c <GetGpioAddress>
+    82a8:	e1a032a2 	lsr	r3, r2, #5
+    82ac:	e1a03103 	lsl	r3, r3, #2
+    82b0:	e0800003 	add	r0, r0, r3
+    82b4:	e202201f 	and	r2, r2, #31
+    82b8:	e3a03001 	mov	r3, #1
+    82bc:	e1a03213 	lsl	r3, r3, r2
+    82c0:	e3310000 	teq	r1, #0
+    82c4:	05803028 	streq	r3, [r0, #40]	; 0x28
+    82c8:	1580301c 	strne	r3, [r0, #28]
+    82cc:	e8bd8000 	pop	{pc}
+    82d0:	20200000 	.word	0x20200000
+
+000082d4 <GetMailboxBase>:
+    82d4:	e59f0060 	ldr	r0, [pc, #96]	; 833c <wait2$+0x14>
+    82d8:	e1a0f00e 	mov	pc, lr
+
+000082dc <MailboxRead>:
+    82dc:	e200300f 	and	r3, r0, #15
+    82e0:	e1a0200e 	mov	r2, lr
+    82e4:	ebfffffa 	bl	82d4 <GetMailboxBase>
+    82e8:	e1a0e002 	mov	lr, r2
+
+000082ec <rightmail$>:
+    82ec:	e5902018 	ldr	r2, [r0, #24]
+    82f0:	e3120101 	tst	r2, #1073741824	; 0x40000000
+    82f4:	1afffffc 	bne	82ec <rightmail$>
+    82f8:	e5901000 	ldr	r1, [r0]
+    82fc:	e201200f 	and	r2, r1, #15
+    8300:	e1320003 	teq	r2, r3
+    8304:	1afffff8 	bne	82ec <rightmail$>
+    8308:	e3c1000f 	bic	r0, r1, #15
+    830c:	e1a0f00e 	mov	pc, lr
+
+00008310 <MailboxWrite>:
+    8310:	e201200f 	and	r2, r1, #15
+    8314:	e3c0100f 	bic	r1, r0, #15
+    8318:	e1811002 	orr	r1, r1, r2
+    831c:	e1a0200e 	mov	r2, lr
+    8320:	ebffffeb 	bl	82d4 <GetMailboxBase>
+    8324:	e1a0e002 	mov	lr, r2
+
+00008328 <wait2$>:
+    8328:	e5902018 	ldr	r2, [r0, #24]
+    832c:	e3120102 	tst	r2, #-2147483648	; 0x80000000
+    8330:	1afffffc 	bne	8328 <wait2$>
+    8334:	e5801020 	str	r1, [r0, #32]
+    8338:	e1a0f00e 	mov	pc, lr
+    833c:	2000b880 	.word	0x2000b880
+
+00008340 <main>:
+    8340:	e3a0d902 	mov	sp, #32768	; 0x8000
+    8344:	e3a00b01 	mov	r0, #1024	; 0x400
+    8348:	e3a01c03 	mov	r1, #768	; 0x300
+    834c:	e3a02010 	mov	r2, #16
+    8350:	ebffff9f 	bl	81d4 <InitialiseFrameBuffer>
+    8354:	e3300000 	teq	r0, #0
+    8358:	1a000006 	bne	8378 <noError$>
+    835c:	e3a00010 	mov	r0, #16
+    8360:	e3a01001 	mov	r1, #1
+    8364:	ebffffb6 	bl	8244 <SetGpioFunction>
+    8368:	e3a00010 	mov	r0, #16
+    836c:	e3a01000 	mov	r1, #0
+    8370:	ebffffc7 	bl	8294 <SetGpio>
+
+00008374 <error$>:
+    8374:	eafffffe 	b	8374 <error$>
+
+00008378 <noError$>:
+    8378:	e1a04000 	mov	r4, r0
+    837c:	ebffff25 	bl	8018 <SetGraphicsAddress>
+    8380:	e3a04000 	mov	r4, #0
+
+00008384 <loop$>:
+    8384:	e59f0060 	ldr	r0, [pc, #96]	; 83ec <loop$+0x68>
+    8388:	e3a01015 	mov	r1, #21
+    838c:	e59f205c 	ldr	r2, [pc, #92]	; 83f0 <loop$+0x6c>
+    8390:	e1a03224 	lsr	r3, r4, #4
+    8394:	e92d0008 	push	{r3}
+    8398:	e92d0008 	push	{r3}
+    839c:	e92d0008 	push	{r3}
+    83a0:	e92d0008 	push	{r3}
+    83a4:	eb000081 	bl	85b0 <FormatString>
+    83a8:	e28dd010 	add	sp, sp, #16
+    83ac:	e1a01000 	mov	r1, r0
+    83b0:	e59f0038 	ldr	r0, [pc, #56]	; 83f0 <loop$+0x6c>
+    83b4:	e3a02000 	mov	r2, #0
+    83b8:	e1a03004 	mov	r3, r4
+    83bc:	e3530e2f 	cmp	r3, #752	; 0x2f0
+    83c0:	82433c03 	subhi	r3, r3, #768	; 0x300
+    83c4:	82822c01 	addhi	r2, r2, #256	; 0x100
+    83c8:	e3530e2f 	cmp	r3, #752	; 0x2f0
+    83cc:	82433c03 	subhi	r3, r3, #768	; 0x300
+    83d0:	82822c01 	addhi	r2, r2, #256	; 0x100
+    83d4:	e3530e2f 	cmp	r3, #752	; 0x2f0
+    83d8:	82433c03 	subhi	r3, r3, #768	; 0x300
+    83dc:	82822c01 	addhi	r2, r2, #256	; 0x100
+    83e0:	ebffff5b 	bl	8154 <DrawString>
+    83e4:	e2844010 	add	r4, r4, #16
+    83e8:	eaffffe5 	b	8384 <loop$>
+    83ec:	0000b000 	.word	0x0000b000
+    83f0:	0000b015 	.word	0x0000b015
+
+000083f4 <DivideU32>:
+    83f4:	e16f2f11 	clz	r2, r1
+    83f8:	e16f3f10 	clz	r3, r0
+    83fc:	e0522003 	subs	r2, r2, r3
+    8400:	e1a03211 	lsl	r3, r1, r2
+    8404:	e1a01000 	mov	r1, r0
+    8408:	e3a00000 	mov	r0, #0
+    840c:	ba000009 	blt	8438 <divideU32Return$>
+
+00008410 <divideU32Loop$>:
+    8410:	e1510003 	cmp	r1, r3
+    8414:	ba000003 	blt	8428 <divideU32LoopContinue$>
+    8418:	e2800001 	add	r0, r0, #1
+    841c:	e0511003 	subs	r1, r1, r3
+    8420:	01a00210 	lsleq	r0, r0, r2
+    8424:	0a000003 	beq	8438 <divideU32Return$>
+
+00008428 <divideU32LoopContinue$>:
+    8428:	e2522001 	subs	r2, r2, #1
+    842c:	a1a030a3 	lsrge	r3, r3, #1
+    8430:	a1a00080 	lslge	r0, r0, #1
+    8434:	aafffff5 	bge	8410 <divideU32Loop$>
+
+00008438 <divideU32Return$>:
+    8438:	e1a0f00e 	mov	pc, lr
+
+0000843c <Random>:
+    843c:	e3a01cef 	mov	r1, #61184	; 0xef00
+    8440:	e0010190 	mul	r1, r0, r1
+    8444:	e0010190 	mul	r1, r0, r1
+    8448:	e0811000 	add	r1, r1, r0
+    844c:	e2810049 	add	r0, r1, #73	; 0x49
+    8450:	e1a0f00e 	mov	pc, lr
+
+00008454 <GetSystemTimerBase>:
+    8454:	e59f0034 	ldr	r0, [pc, #52]	; 8490 <loop$+0x14>
+    8458:	e1a0f00e 	mov	pc, lr
+
+0000845c <GetTimeStamp>:
+    845c:	e92d4000 	push	{lr}
+    8460:	ebfffffb 	bl	8454 <GetSystemTimerBase>
+    8464:	e1c000d4 	ldrd	r0, [r0, #4]
+    8468:	e8bd8000 	pop	{pc}
+
+0000846c <Wait>:
+    846c:	e1a02000 	mov	r2, r0
+    8470:	e92d4000 	push	{lr}
+    8474:	ebfffff8 	bl	845c <GetTimeStamp>
+    8478:	e1a03000 	mov	r3, r0
+
+0000847c <loop$>:
+    847c:	ebfffff6 	bl	845c <GetTimeStamp>
+    8480:	e0401003 	sub	r1, r0, r3
+    8484:	e1510002 	cmp	r1, r2
+    8488:	9afffffb 	bls	847c <loop$>
+    848c:	e8bd8000 	pop	{pc}
+    8490:	20003000 	.word	0x20003000
+
+00008494 <FindTag>:
+    8494:	e92d4000 	push	{lr}
+    8498:	e2400001 	sub	r0, r0, #1
+    849c:	e3500008 	cmp	r0, #8
+    84a0:	83a00000 	movhi	r0, #0
+    84a4:	88bd8000 	pophi	{pc}
+    84a8:	e59f1054 	ldr	r1, [pc, #84]	; 8504 <tagLoop$+0x2c>
+
+000084ac <tagReturn$>:
+    84ac:	e0812100 	add	r2, r1, r0, lsl #2
+    84b0:	e5922000 	ldr	r2, [r2]
+    84b4:	e3320000 	teq	r2, #0
+    84b8:	11a00002 	movne	r0, r2
+    84bc:	18bd8000 	popne	{pc}
+    84c0:	e5912000 	ldr	r2, [r1]
+    84c4:	e3320000 	teq	r2, #0
+    84c8:	13a00000 	movne	r0, #0
+    84cc:	18bd8000 	popne	{pc}
+    84d0:	e3a02c01 	mov	r2, #256	; 0x100
+    84d4:	e92d0010 	push	{r4}
+
+000084d8 <tagLoop$>:
+    84d8:	e1d230b4 	ldrh	r3, [r2, #4]
+    84dc:	e2533001 	subs	r3, r3, #1
+    84e0:	b8bd0010 	poplt	{r4}
+    84e4:	bafffff0 	blt	84ac <tagReturn$>
+    84e8:	e0813103 	add	r3, r1, r3, lsl #2
+    84ec:	e5934000 	ldr	r4, [r3]
+    84f0:	e3340000 	teq	r4, #0
+    84f4:	05832000 	streq	r2, [r3]
+    84f8:	e5923000 	ldr	r3, [r2]
+    84fc:	e0822103 	add	r2, r2, r3, lsl #2
+    8500:	eafffff4 	b	84d8 <tagLoop$>
+    8504:	0000b015 	.word	0x0000b015
+
+00008508 <ReverseString>:
+    8508:	e0811000 	add	r1, r1, r0
+    850c:	e2411001 	sub	r1, r1, #1
+
+00008510 <revLoop$>:
+    8510:	e1510000 	cmp	r1, r0
+    8514:	91a0f00e 	movls	pc, lr
+    8518:	e5d02000 	ldrb	r2, [r0]
+    851c:	e5d13000 	ldrb	r3, [r1]
+    8520:	e5c03000 	strb	r3, [r0]
+    8524:	e5c12000 	strb	r2, [r1]
+    8528:	e2800001 	add	r0, r0, #1
+    852c:	e2411001 	sub	r1, r1, #1
+    8530:	eafffff6 	b	8510 <revLoop$>
+
+00008534 <UnsignedString>:
+    8534:	e92d40f0 	push	{r4, r5, r6, r7, lr}
+    8538:	e1a05001 	mov	r5, r1
+    853c:	e1a06002 	mov	r6, r2
+    8540:	e3a07000 	mov	r7, #0
+
+00008544 <charLoop$>:
+    8544:	e1a01006 	mov	r1, r6
+    8548:	ebffffa9 	bl	83f4 <DivideU32>
+    854c:	e3510009 	cmp	r1, #9
+    8550:	92811030 	addls	r1, r1, #48	; 0x30
+    8554:	82811057 	addhi	r1, r1, #87	; 0x57
+    8558:	e3350000 	teq	r5, #0
+    855c:	17c51007 	strbne	r1, [r5, r7]
+    8560:	e2877001 	add	r7, r7, #1
+    8564:	e3300000 	teq	r0, #0
+    8568:	1afffff5 	bne	8544 <charLoop$>
+    856c:	e3350000 	teq	r5, #0
+    8570:	11a00005 	movne	r0, r5
+    8574:	11a01007 	movne	r1, r7
+    8578:	1bffffe2 	blne	8508 <ReverseString>
+    857c:	e1a00007 	mov	r0, r7
+    8580:	e8bd80f0 	pop	{r4, r5, r6, r7, pc}
+
+00008584 <SignedString>:
+    8584:	e3500000 	cmp	r0, #0
+    8588:	aaffffe9 	bge	8534 <UnsignedString>
+    858c:	e2600000 	rsb	r0, r0, #0
+    8590:	e3310000 	teq	r1, #0
+    8594:	13a0302d 	movne	r3, #45	; 0x2d
+    8598:	15c13000 	strbne	r3, [r1]
+    859c:	12811001 	addne	r1, r1, #1
+    85a0:	e92d4000 	push	{lr}
+    85a4:	ebffffe2 	bl	8534 <UnsignedString>
+    85a8:	e2800001 	add	r0, r0, #1
+    85ac:	e8bd8000 	pop	{pc}
+
+000085b0 <FormatString>:
+    85b0:	e92d43f0 	push	{r4, r5, r6, r7, r8, r9, lr}
+    85b4:	e1a04000 	mov	r4, r0
+    85b8:	e1a05001 	mov	r5, r1
+    85bc:	e1a06002 	mov	r6, r2
+    85c0:	e1a07003 	mov	r7, r3
+    85c4:	e28d801c 	add	r8, sp, #28
+    85c8:	e3a09000 	mov	r9, #0
+
+000085cc <formatLoop$>:
+    85cc:	e2555001 	subs	r5, r5, #1
+    85d0:	b1a00009 	movlt	r0, r9
+    85d4:	b8bd83f0 	poplt	{r4, r5, r6, r7, r8, r9, pc}
+    85d8:	e5d40000 	ldrb	r0, [r4]
+    85dc:	e2844001 	add	r4, r4, #1
+    85e0:	e3300025 	teq	r0, #37	; 0x25
+    85e4:	0a000004 	beq	85fc <formatArg$>
+
+000085e8 <formatChar$>:
+    85e8:	e3360000 	teq	r6, #0
+    85ec:	15c60000 	strbne	r0, [r6]
+    85f0:	12866001 	addne	r6, r6, #1
+    85f4:	e2899001 	add	r9, r9, #1
+    85f8:	eafffff3 	b	85cc <formatLoop$>
+
+000085fc <formatArg$>:
+    85fc:	e2555001 	subs	r5, r5, #1
+    8600:	b1a00009 	movlt	r0, r9
+    8604:	b8bd83f0 	poplt	{r4, r5, r6, r7, r8, r9, pc}
+    8608:	e5d40000 	ldrb	r0, [r4]
+    860c:	e2844001 	add	r4, r4, #1
+    8610:	e3300025 	teq	r0, #37	; 0x25
+    8614:	0afffff3 	beq	85e8 <formatChar$>
+    8618:	e3300063 	teq	r0, #99	; 0x63
+    861c:	01a00007 	moveq	r0, r7
+    8620:	05987000 	ldreq	r7, [r8]
+    8624:	02888004 	addeq	r8, r8, #4
+    8628:	0affffee 	beq	85e8 <formatChar$>
+    862c:	e3300073 	teq	r0, #115	; 0x73
+    8630:	0a000007 	beq	8654 <formatString$>
+    8634:	e3300064 	teq	r0, #100	; 0x64
+    8638:	0a000010 	beq	8680 <formatSigned$>
+    863c:	e3300075 	teq	r0, #117	; 0x75
+    8640:	13300078 	teqne	r0, #120	; 0x78
+    8644:	13300062 	teqne	r0, #98	; 0x62
+    8648:	1330006f 	teqne	r0, #111	; 0x6f
+    864c:	0a000015 	beq	86a8 <formatUnsigned$>
+    8650:	eaffffdd 	b	85cc <formatLoop$>
+
+00008654 <formatString$>:
+    8654:	e5d70000 	ldrb	r0, [r7]
+    8658:	e3300030 	teq	r0, #48	; 0x30
+    865c:	05987000 	ldreq	r7, [r8]
+    8660:	02888004 	addeq	r8, r8, #4
+    8664:	0affffd8 	beq	85cc <formatLoop$>
+    8668:	e2899001 	add	r9, r9, #1
+    866c:	e3360000 	teq	r6, #0
+    8670:	15c60000 	strbne	r0, [r6]
+    8674:	12866001 	addne	r6, r6, #1
+    8678:	e2877001 	add	r7, r7, #1
+    867c:	eafffff4 	b	8654 <formatString$>
+
+00008680 <formatSigned$>:
+    8680:	e1a00007 	mov	r0, r7
+    8684:	e5987000 	ldr	r7, [r8]
+    8688:	e2888004 	add	r8, r8, #4
+    868c:	e1a01006 	mov	r1, r6
+    8690:	e3a0200a 	mov	r2, #10
+    8694:	ebffffba 	bl	8584 <SignedString>
+    8698:	e3360000 	teq	r6, #0
+    869c:	10866000 	addne	r6, r6, r0
+    86a0:	e0899000 	add	r9, r9, r0
+    86a4:	eaffffc8 	b	85cc <formatLoop$>
+
+000086a8 <formatUnsigned$>:
+    86a8:	e3300075 	teq	r0, #117	; 0x75
+    86ac:	03a0200a 	moveq	r2, #10
+    86b0:	e3300078 	teq	r0, #120	; 0x78
+    86b4:	03a02010 	moveq	r2, #16
+    86b8:	e3300062 	teq	r0, #98	; 0x62
+    86bc:	03a02002 	moveq	r2, #2
+    86c0:	e330006f 	teq	r0, #111	; 0x6f
+    86c4:	03a02008 	moveq	r2, #8
+    86c8:	e1a00007 	mov	r0, r7
+    86cc:	e5987000 	ldr	r7, [r8]
+    86d0:	e2888004 	add	r8, r8, #4
+    86d4:	e1a01006 	mov	r1, r6
+    86d8:	ebffff95 	bl	8534 <UnsignedString>
+    86dc:	e3360000 	teq	r6, #0
+    86e0:	10866000 	addne	r6, r6, r0
+    86e4:	e0899000 	add	r9, r9, r0
+    86e8:	eaffffb7 	b	85cc <formatLoop$>

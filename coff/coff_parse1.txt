@@ -1,0 +1,1026 @@
+
+OBJECT FILE:  HelloWorld.out
+
+ Object File Information
+
+    File Name:                 HelloWorld.out                            
+    Format:                    TI-COFF Version 2                         
+    File Type:                 executable file                           
+    Time Stamp:                Tue Jan 24 17:06:55 2012                  
+    Machine:                   MSP430                                    
+    Machine Endian:            little endian                             
+    Entry Point:               0x0000f826                                
+    Vendor:                    Texas Instruments, Inc.                   
+    Producer:                  Linker                                    
+    Linker Version:            3.3.3                                     
+    Number of Sections:        33                                        
+    File Length:               10301                                     
+    Symbol Table File Offset:  0x00001c08                                
+    String Table File Offset:  0x00002616                                
+    TI-COFF f_flags:           0x00001103                                
+    TI-COFF f_flag:            F_RELFLG (relocation info stripped)       
+    TI-COFF f_flag:            F_SYMMERGE (debug type information merged)
+    CPU Generation:            MSP                                       
+    Control Data Endian:       little endian                             
+    Start of .text Section:    0x0000f800                                
+    Start of .data Section:    0x00000000                                
+    Size of .text Section:     78                                        
+    Size of .data Section:     0                                         
+    Size of .bss Section:      8                                         
+
+ Section Information
+
+    <1> "$build.attributes"
+       Load Address:        0x00000000  Run Address:        0x00000000
+       Size:                0x24        Alignment:          1         
+       Loaded Onto Device:  No          Address Unit Size:  8 bits    
+       File Offset:         0x00000662  # Relocs:           0         
+       Reloc File Offset:   0x00000000  # Lines:            0         
+       Line File Offset:    0x00000000  TI-COFF s_flags:    0x00000010
+       TI-COFF s_flag:      STYP_COPY                                 
+
+    <2> ".bss"
+       Load Address:        0x00000200  Run Address:        0x00000200
+       Size:                0x8         Alignment:          2         
+       Loaded Onto Device:  Yes         Address Unit Size:  8 bits    
+       File Offset:         0x00000000  # Relocs:           0         
+       Reloc File Offset:   0x00000000  # Lines:            0         
+       Line File Offset:    0x00000000  TI-COFF s_flags:    0x00000080
+       TI-COFF s_flag:      STYP_BSS                                  
+
+    <3> ".sysmem"
+       Load Address:        0x00000000  Run Address:        0x00000000
+       Size:                0x0         Alignment:          1         
+       Loaded Onto Device:  No          Address Unit Size:  8 bits    
+       File Offset:         0x00000000  # Relocs:           0         
+       Reloc File Offset:   0x00000000  # Lines:            0         
+       Line File Offset:    0x00000000  TI-COFF s_flags:    0x00000010
+       TI-COFF s_flag:      STYP_COPY                                 
+
+    <4> ".stack"
+       Load Address:        0x0000024c  Run Address:        0x0000024c
+       Size:                0x32        Alignment:          4         
+       Loaded Onto Device:  Yes         Address Unit Size:  8 bits    
+       File Offset:         0x00000000  # Relocs:           0         
+       Reloc File Offset:   0x00000000  # Lines:            0         
+       Line File Offset:    0x00000000  TI-COFF s_flags:    0x00000080
+       TI-COFF s_flag:      STYP_BSS                                  
+
+    <5> ".text"
+       Load Address:        0x0000f800  Run Address:        0x0000f800
+       Size:                0x4e        Alignment:          2         
+       Loaded Onto Device:  Yes         Address Unit Size:  8 bits    
+       File Offset:         0x00000686  # Relocs:           0         
+       Reloc File Offset:   0x00000000  # Lines:            0         
+       Line File Offset:    0x00000000  TI-COFF s_flags:    0x00000020
+       TI-COFF s_flag:      STYP_TEXT                                 
+
+    <6> ".cinit"
+       Load Address:        0x00000000  Run Address:        0x00000000
+       Size:                0x0         Alignment:          1         
+       Loaded Onto Device:  No          Address Unit Size:  8 bits    
+       File Offset:         0x00000000  # Relocs:           0         
+       Reloc File Offset:   0x00000000  # Lines:            0         
+       Line File Offset:    0x00000000  TI-COFF s_flags:    0x00000010
+       TI-COFF s_flag:      STYP_COPY                                 
+
+    <7> ".const"
+       Load Address:        0x00000000  Run Address:        0x00000000
+       Size:                0x0         Alignment:          1         
+       Loaded Onto Device:  No          Address Unit Size:  8 bits    
+       File Offset:         0x00000000  # Relocs:           0         
+       Reloc File Offset:   0x00000000  # Lines:            0         
+       Line File Offset:    0x00000000  TI-COFF s_flags:    0x00000010
+       TI-COFF s_flag:      STYP_COPY                                 
+
+    <8> ".cio"
+       Load Address:        0x00000000  Run Address:        0x00000000
+       Size:                0x0         Alignment:          1         
+       Loaded Onto Device:  No          Address Unit Size:  8 bits    
+       File Offset:         0x00000000  # Relocs:           0         
+       Reloc File Offset:   0x00000000  # Lines:            0         
+       Line File Offset:    0x00000000  TI-COFF s_flags:    0x00000010
+       TI-COFF s_flag:      STYP_COPY                                 
+
+    <9> ".pinit"
+       Load Address:        0x00000000  Run Address:        0x00000000
+       Size:                0x0         Alignment:          1         
+       Loaded Onto Device:  No          Address Unit Size:  8 bits    
+       File Offset:         0x00000000  # Relocs:           0         
+       Reloc File Offset:   0x00000000  # Lines:            0         
+       Line File Offset:    0x00000000  TI-COFF s_flags:    0x00000010
+       TI-COFF s_flag:      STYP_COPY                                 
+
+    <10> ".infoA"
+       Load Address:        0x00000000  Run Address:        0x00000000
+       Size:                0x0         Alignment:          1         
+       Loaded Onto Device:  No          Address Unit Size:  8 bits    
+       File Offset:         0x00000000  # Relocs:           0         
+       Reloc File Offset:   0x00000000  # Lines:            0         
+       Line File Offset:    0x00000000  TI-COFF s_flags:    0x00000010
+       TI-COFF s_flag:      STYP_COPY                                 
+
+    <11> ".infoB"
+       Load Address:        0x00000000  Run Address:        0x00000000
+       Size:                0x0         Alignment:          1         
+       Loaded Onto Device:  No          Address Unit Size:  8 bits    
+       File Offset:         0x00000000  # Relocs:           0         
+       Reloc File Offset:   0x00000000  # Lines:            0         
+       Line File Offset:    0x00000000  TI-COFF s_flags:    0x00000010
+       TI-COFF s_flag:      STYP_COPY                                 
+
+    <12> ".infoC"
+       Load Address:        0x00000000  Run Address:        0x00000000
+       Size:                0x0         Alignment:          1         
+       Loaded Onto Device:  No          Address Unit Size:  8 bits    
+       File Offset:         0x00000000  # Relocs:           0         
+       Reloc File Offset:   0x00000000  # Lines:            0         
+       Line File Offset:    0x00000000  TI-COFF s_flags:    0x00000010
+       TI-COFF s_flag:      STYP_COPY                                 
+
+    <13> ".infoD"
+       Load Address:        0x00000000  Run Address:        0x00000000
+       Size:                0x0         Alignment:          1         
+       Loaded Onto Device:  No          Address Unit Size:  8 bits    
+       File Offset:         0x00000000  # Relocs:           0         
+       Reloc File Offset:   0x00000000  # Lines:            0         
+       Line File Offset:    0x00000000  TI-COFF s_flags:    0x00000010
+       TI-COFF s_flag:      STYP_COPY                                 
+
+    <14> ".int00"
+       Load Address:        0x00000000  Run Address:        0x00000000
+       Size:                0x0         Alignment:          1         
+       Loaded Onto Device:  No          Address Unit Size:  8 bits    
+       File Offset:         0x00000000  # Relocs:           0         
+       Reloc File Offset:   0x00000000  # Lines:            0         
+       Line File Offset:    0x00000000  TI-COFF s_flags:    0x00000010
+       TI-COFF s_flag:      STYP_COPY                                 
+
+    <15> ".int01"
+       Load Address:        0x00000000  Run Address:        0x00000000
+       Size:                0x0         Alignment:          1         
+       Loaded Onto Device:  No          Address Unit Size:  8 bits    
+       File Offset:         0x00000000  # Relocs:           0         
+       Reloc File Offset:   0x00000000  # Lines:            0         
+       Line File Offset:    0x00000000  TI-COFF s_flags:    0x00000010
+       TI-COFF s_flag:      STYP_COPY                                 
+
+    <16> ".int02"
+       Load Address:        0x00000000  Run Address:        0x00000000
+       Size:                0x0         Alignment:          1         
+       Loaded Onto Device:  No          Address Unit Size:  8 bits    
+       File Offset:         0x00000000  # Relocs:           0         
+       Reloc File Offset:   0x00000000  # Lines:            0         
+       Line File Offset:    0x00000000  TI-COFF s_flags:    0x00000010
+       TI-COFF s_flag:      STYP_COPY                                 
+
+    <17> ".int03"
+       Load Address:        0x00000000  Run Address:        0x00000000
+       Size:                0x0         Alignment:          1         
+       Loaded Onto Device:  No          Address Unit Size:  8 bits    
+       File Offset:         0x00000000  # Relocs:           0         
+       Reloc File Offset:   0x00000000  # Lines:            0         
+       Line File Offset:    0x00000000  TI-COFF s_flags:    0x00000010
+       TI-COFF s_flag:      STYP_COPY                                 
+
+    <18> ".int04"
+       Load Address:        0x00000000  Run Address:        0x00000000
+       Size:                0x0         Alignment:          1         
+       Loaded Onto Device:  No          Address Unit Size:  8 bits    
+       File Offset:         0x00000000  # Relocs:           0         
+       Reloc File Offset:   0x00000000  # Lines:            0         
+       Line File Offset:    0x00000000  TI-COFF s_flags:    0x00000010
+       TI-COFF s_flag:      STYP_COPY                                 
+
+    <19> ".int05"
+       Load Address:        0x00000000  Run Address:        0x00000000
+       Size:                0x0         Alignment:          1         
+       Loaded Onto Device:  No          Address Unit Size:  8 bits    
+       File Offset:         0x00000000  # Relocs:           0         
+       Reloc File Offset:   0x00000000  # Lines:            0         
+       Line File Offset:    0x00000000  TI-COFF s_flags:    0x00000010
+       TI-COFF s_flag:      STYP_COPY                                 
+
+    <20> ".int06"
+       Load Address:        0x00000000  Run Address:        0x00000000
+       Size:                0x0         Alignment:          1         
+       Loaded Onto Device:  No          Address Unit Size:  8 bits    
+       File Offset:         0x00000000  # Relocs:           0         
+       Reloc File Offset:   0x00000000  # Lines:            0         
+       Line File Offset:    0x00000000  TI-COFF s_flags:    0x00000010
+       TI-COFF s_flag:      STYP_COPY                                 
+
+    <21> ".int07"
+       Load Address:        0x00000000  Run Address:        0x00000000
+       Size:                0x0         Alignment:          1         
+       Loaded Onto Device:  No          Address Unit Size:  8 bits    
+       File Offset:         0x00000000  # Relocs:           0         
+       Reloc File Offset:   0x00000000  # Lines:            0         
+       Line File Offset:    0x00000000  TI-COFF s_flags:    0x00000010
+       TI-COFF s_flag:      STYP_COPY                                 
+
+    <22> ".int08"
+       Load Address:        0x00000000  Run Address:        0x00000000
+       Size:                0x0         Alignment:          1         
+       Loaded Onto Device:  No          Address Unit Size:  8 bits    
+       File Offset:         0x00000000  # Relocs:           0         
+       Reloc File Offset:   0x00000000  # Lines:            0         
+       Line File Offset:    0x00000000  TI-COFF s_flags:    0x00000010
+       TI-COFF s_flag:      STYP_COPY                                 
+
+    <23> ".int09"
+       Load Address:        0x00000000  Run Address:        0x00000000
+       Size:                0x0         Alignment:          1         
+       Loaded Onto Device:  No          Address Unit Size:  8 bits    
+       File Offset:         0x00000000  # Relocs:           0         
+       Reloc File Offset:   0x00000000  # Lines:            0         
+       Line File Offset:    0x00000000  TI-COFF s_flags:    0x00000010
+       TI-COFF s_flag:      STYP_COPY                                 
+
+    <24> ".int10"
+       Load Address:        0x00000000  Run Address:        0x00000000
+       Size:                0x0         Alignment:          1         
+       Loaded Onto Device:  No          Address Unit Size:  8 bits    
+       File Offset:         0x00000000  # Relocs:           0         
+       Reloc File Offset:   0x00000000  # Lines:            0         
+       Line File Offset:    0x00000000  TI-COFF s_flags:    0x00000010
+       TI-COFF s_flag:      STYP_COPY                                 
+
+    <25> ".int11"
+       Load Address:        0x00000000  Run Address:        0x00000000
+       Size:                0x0         Alignment:          1         
+       Loaded Onto Device:  No          Address Unit Size:  8 bits    
+       File Offset:         0x00000000  # Relocs:           0         
+       Reloc File Offset:   0x00000000  # Lines:            0         
+       Line File Offset:    0x00000000  TI-COFF s_flags:    0x00000010
+       TI-COFF s_flag:      STYP_COPY                                 
+
+    <26> ".int12"
+       Load Address:        0x00000000  Run Address:        0x00000000
+       Size:                0x0         Alignment:          1         
+       Loaded Onto Device:  No          Address Unit Size:  8 bits    
+       File Offset:         0x00000000  # Relocs:           0         
+       Reloc File Offset:   0x00000000  # Lines:            0         
+       Line File Offset:    0x00000000  TI-COFF s_flags:    0x00000010
+       TI-COFF s_flag:      STYP_COPY                                 
+
+    <27> ".int13"
+       Load Address:        0x00000000  Run Address:        0x00000000
+       Size:                0x0         Alignment:          1         
+       Loaded Onto Device:  No          Address Unit Size:  8 bits    
+       File Offset:         0x00000000  # Relocs:           0         
+       Reloc File Offset:   0x00000000  # Lines:            0         
+       Line File Offset:    0x00000000  TI-COFF s_flags:    0x00000010
+       TI-COFF s_flag:      STYP_COPY                                 
+
+    <28> ".int14"
+       Load Address:        0x00000000  Run Address:        0x00000000
+       Size:                0x0         Alignment:          1         
+       Loaded Onto Device:  No          Address Unit Size:  8 bits    
+       File Offset:         0x00000000  # Relocs:           0         
+       Reloc File Offset:   0x00000000  # Lines:            0         
+       Line File Offset:    0x00000000  TI-COFF s_flags:    0x00000010
+       TI-COFF s_flag:      STYP_COPY                                 
+
+    <29> ".reset"
+       Load Address:        0x0000fffe  Run Address:        0x0000fffe
+       Size:                0x2         Alignment:          2         
+       Loaded Onto Device:  Yes         Address Unit Size:  8 bits    
+       File Offset:         0x000006d4  # Relocs:           0         
+       Reloc File Offset:   0x00000000  # Lines:            0         
+       Line File Offset:    0x00000000  TI-COFF s_flags:    0x00000040
+       TI-COFF s_flag:      STYP_DATA                                 
+
+    <30> ".debug_info"
+       Load Address:        0x00000000  Run Address:        0x00000000
+       Size:                0x112b      Alignment:          1         
+       Loaded Onto Device:  No          Address Unit Size:  8 bits    
+       File Offset:         0x000006d6  # Relocs:           0         
+       Reloc File Offset:   0x00000000  # Lines:            0         
+       Line File Offset:    0x00000000  TI-COFF s_flags:    0x00000010
+       TI-COFF s_flag:      STYP_COPY                                 
+
+    <31> ".debug_frame"
+       Load Address:        0x00000000  Run Address:        0x00000000
+       Size:                0x4a        Alignment:          1         
+       Loaded Onto Device:  No          Address Unit Size:  8 bits    
+       File Offset:         0x00001801  # Relocs:           0         
+       Reloc File Offset:   0x00000000  # Lines:            0         
+       Line File Offset:    0x00000000  TI-COFF s_flags:    0x00000010
+       TI-COFF s_flag:      STYP_COPY                                 
+
+    <32> ".debug_line"
+       Load Address:        0x00000000  Run Address:        0x00000000
+       Size:                0x1f6       Alignment:          1         
+       Loaded Onto Device:  No          Address Unit Size:  8 bits    
+       File Offset:         0x0000184b  # Relocs:           0         
+       Reloc File Offset:   0x00000000  # Lines:            0         
+       Line File Offset:    0x00000000  TI-COFF s_flags:    0x00000010
+       TI-COFF s_flag:      STYP_COPY                                 
+
+    <33> ".debug_abbrev"
+       Load Address:        0x00000000  Run Address:        0x00000000
+       Size:                0x1c7       Alignment:          1         
+       Loaded Onto Device:  No          Address Unit Size:  8 bits    
+       File Offset:         0x00001a41  # Relocs:           0         
+       Reloc File Offset:   0x00000000  # Lines:            0         
+       Line File Offset:    0x00000000  TI-COFF s_flags:    0x00000010
+       TI-COFF s_flag:      STYP_COPY                                 
+
+
+ Build Attributes in "$build.attributes"
+
+    Format Version:  'A'
+
+    <0>  Vendor Name:  "TI" (Texas Instruments, Inc.)
+
+         Tag_File:
+            Attributes:
+             Tag_Producer_Name    Linker  
+             Tag_Producer_VMajor  4       (Producer Major Version + 1)
+             Tag_Producer_VMinor  4       (Producer Minor Version + 1)
+             Tag_Producer_VPatch  4       (Producer Patch Version + 1)
+             Tag_ISA              1       (MSP)
+             Tag_Code_Model       1       (small code)
+             Tag_Data_Model       1       (small data)
+
+ Symbol Table
+
+    <0> "0048010"
+       Value:          0x00000000  Kind:        debug
+       Binding:        local       Type:        file
+       Storage Class:  C_FILE      Basic Type:  void
+
+    <1> "$C$DW$L$main$2$B" (defined in section ".text" (5))
+       Value:          0x0000f80e  Kind:        defined
+       Binding:        local       Type:        none
+       Storage Class:  C_LABEL     Basic Type:  int
+
+    <2> "$C$L1" (defined in section ".text" (5))
+       Value:          0x0000f80e  Kind:        defined
+       Binding:        local       Type:        none
+       Storage Class:  C_LABEL     Basic Type:  int
+
+    <3> "$C$DW$L$main$3$B" (defined in section ".text" (5))
+       Value:          0x0000f81a  Kind:        defined
+       Binding:        local       Type:        none
+       Storage Class:  C_LABEL     Basic Type:  int
+
+    <4> "$C$L2" (defined in section ".text" (5))
+       Value:          0x0000f81a  Kind:        defined
+       Binding:        local       Type:        none
+       Storage Class:  C_LABEL     Basic Type:  int
+
+    <5> "$C$DW$L$main$2$E" (defined in section ".text" (5))
+       Value:          0x0000f81a  Kind:        defined
+       Binding:        local       Type:        none
+       Storage Class:  C_LABEL     Basic Type:  int
+
+    <6> "$C$DW$L$main$4$B" (defined in section ".text" (5))
+       Value:          0x0000f824  Kind:        defined
+       Binding:        local       Type:        none
+       Storage Class:  C_LABEL     Basic Type:  int
+
+    <7> "$C$DW$L$main$3$E" (defined in section ".text" (5))
+       Value:          0x0000f824  Kind:        defined
+       Binding:        local       Type:        none
+       Storage Class:  C_LABEL     Basic Type:  int
+
+    <8> "$C$DW$L$main$4$E" (defined in section ".text" (5))
+       Value:          0x0000f826  Kind:        defined
+       Binding:        local       Type:        none
+       Storage Class:  C_LABEL     Basic Type:  int
+
+    <9> ".text:main" (defined in section ".text" (5))
+       Value:           0x0000f800  Kind:        defined
+       Binding:         local       Type:        section
+       Storage Class:   C_STAT      Basic Type:  void
+       Section Length:  38          # Relocs:    3
+       # Line Entries:  0                        
+
+    <11> ".debug_line" (defined in section ".debug_line" (32))
+       Value:           0x00000000  Kind:        defined
+       Binding:         local       Type:        section
+       Storage Class:   C_STAT      Basic Type:  void
+       Section Length:  81          # Relocs:    4
+       # Line Entries:  0                        
+
+    <13> ".debug_info" (defined in section ".debug_info" (30))
+       Value:           0x00000000  Kind:        defined
+       Binding:         local       Type:        section
+       Storage Class:   C_STAT      Basic Type:  void
+       Section Length:  874         # Relocs:    20
+       # Line Entries:  0                        
+
+    <15> "boot.asm"
+       Value:          0x00000000  Kind:        debug
+       Binding:        local       Type:        file
+       Storage Class:  C_FILE      Basic Type:  void
+
+    <16> ".bss" (defined in section ".bss" (2))
+       Value:           0x00000204  Kind:        defined
+       Binding:         local       Type:        section
+       Storage Class:   C_STAT      Basic Type:  void
+       Section Length:  4           # Relocs:    0
+       # Line Entries:  0                        
+
+    <18> ".stack" (defined in section ".stack" (4))
+       Value:           0x0000024c  Kind:        defined
+       Binding:         local       Type:        section
+       Storage Class:   C_STAT      Basic Type:  void
+       Section Length:  2           # Relocs:    0
+       # Line Entries:  0                        
+
+    <20> ".reset" (defined in section ".reset" (29))
+       Value:           0x0000fffe  Kind:        defined
+       Binding:         local       Type:        section
+       Storage Class:   C_STAT      Basic Type:  void
+       Section Length:  2           # Relocs:    1
+       # Line Entries:  0                        
+
+    <22> ".text:_c_int00_noinit_noexit" (defined in section ".text" (5))
+       Value:           0x0000f826  Kind:        defined
+       Binding:         local       Type:        section
+       Storage Class:   C_STAT      Basic Type:  void
+       Section Length:  30          # Relocs:    8
+       # Line Entries:  0                        
+
+    <24> ".debug_line" (defined in section ".debug_line" (32))
+       Value:           0x00000051  Kind:        defined
+       Binding:         local       Type:        section
+       Storage Class:   C_STAT      Basic Type:  void
+       Section Length:  258         # Relocs:    31
+       # Line Entries:  0                        
+
+    <26> ".debug_info" (defined in section ".debug_info" (30))
+       Value:           0x0000036a  Kind:        defined
+       Binding:         local       Type:        section
+       Storage Class:   C_STAT      Basic Type:  void
+       Section Length:  2588        # Relocs:    116
+       # Line Entries:  0                        
+
+    <28> "exit.asm"
+       Value:          0x00000000  Kind:        debug
+       Binding:        local       Type:        file
+       Storage Class:  C_FILE      Basic Type:  void
+
+    <29> "$C$L1" (defined in section ".text" (5))
+       Value:          0x0000f84a  Kind:        defined
+       Binding:        local       Type:        none
+       Storage Class:  C_LABEL     Basic Type:  int
+
+    <30> ".text:abort" (defined in section ".text" (5))
+       Value:           0x0000f848  Kind:        defined
+       Binding:         local       Type:        section
+       Storage Class:   C_STAT      Basic Type:  void
+       Section Length:  4           # Relocs:    0
+       # Line Entries:  0                        
+
+    <32> ".debug_line" (defined in section ".debug_line" (32))
+       Value:           0x0000008b  Kind:        defined
+       Binding:         local       Type:        section
+       Storage Class:   C_STAT      Basic Type:  void
+       Section Length:  80          # Relocs:    7
+       # Line Entries:  0                        
+
+    <34> ".debug_info" (defined in section ".debug_info" (30))
+       Value:           0x00000840  Kind:        defined
+       Binding:         local       Type:        section
+       Storage Class:   C_STAT      Basic Type:  void
+       Section Length:  1119        # Relocs:    36
+       # Line Entries:  0                        
+
+    <36> "pre_init.asm"
+       Value:          0x00000000  Kind:        debug
+       Binding:        local       Type:        file
+       Storage Class:  C_FILE      Basic Type:  void
+
+    <37> ".text:_system_pre_init" (defined in section ".text" (5))
+       Value:           0x0000f844  Kind:        defined
+       Binding:         local       Type:        section
+       Storage Class:   C_STAT      Basic Type:  void
+       Section Length:  4           # Relocs:    0
+       # Line Entries:  0                        
+
+    <39> ".debug_line" (defined in section ".debug_line" (32))
+       Value:           0x000000c4  Kind:        defined
+       Binding:         local       Type:        section
+       Storage Class:   C_STAT      Basic Type:  void
+       Section Length:  59          # Relocs:    4
+       # Line Entries:  0                        
+
+    <41> ".debug_info" (defined in section ".debug_info" (30))
+       Value:           0x00000c21  Kind:        defined
+       Binding:         local       Type:        section
+       Storage Class:   C_STAT      Basic Type:  void
+       Section Length:  616         # Relocs:    9
+       # Line Entries:  0                        
+
+    <43> "_lock.asm"
+       Value:          0x00000000  Kind:        debug
+       Binding:        local       Type:        file
+       Storage Class:  C_FILE      Basic Type:  void
+
+    <44> ".bss" (defined in section ".bss" (2))
+       Value:           0x00000200  Kind:        defined
+       Binding:         local       Type:        section
+       Storage Class:   C_STAT      Basic Type:  void
+       Section Length:  4           # Relocs:    0
+       # Line Entries:  0                        
+
+    <46> ".text:_nop" (defined in section ".text" (5))
+       Value:           0x0000f84c  Kind:        defined
+       Binding:         local       Type:        section
+       Storage Class:   C_STAT      Basic Type:  void
+       Section Length:  2           # Relocs:    0
+       # Line Entries:  0                        
+
+    <48> ".debug_line" (defined in section ".debug_line" (32))
+       Value:           0x000000ff  Kind:        defined
+       Binding:         local       Type:        section
+       Storage Class:   C_STAT      Basic Type:  void
+       Section Length:  94          # Relocs:    10
+       # Line Entries:  0                        
+
+    <50> ".debug_info" (defined in section ".debug_info" (30))
+       Value:           0x00000e89  Kind:        defined
+       Binding:         local       Type:        section
+       Storage Class:   C_STAT      Basic Type:  void
+       Section Length:  890         # Relocs:    29
+       # Line Entries:  0                        
+
+    <52> "args_main.asm"
+       Value:          0x00000000  Kind:        debug
+       Binding:        local       Type:        file
+       Storage Class:  C_FILE      Basic Type:  void
+
+    <53> ".debug_line" (defined in section ".debug_line" (32))
+       Value:           0x0000013b  Kind:        defined
+       Binding:         local       Type:        section
+       Storage Class:   C_STAT      Basic Type:  void
+       Section Length:  71          # Relocs:    4
+       # Line Entries:  0                        
+
+    <55> ".debug_info" (defined in section ".debug_info" (30))
+       Value:           0x00001117  Kind:        defined
+       Binding:         local       Type:        section
+       Storage Class:   C_STAT      Basic Type:  void
+       Section Length:  807         # Relocs:    21
+       # Line Entries:  0                        
+
+    <57> "autoinit.asm"
+       Value:          0x00000000  Kind:        debug
+       Binding:        local       Type:        file
+       Storage Class:  C_FILE      Basic Type:  void
+
+    <58> ".debug_line" (defined in section ".debug_line" (32))
+       Value:           0x0000016b  Kind:        defined
+       Binding:         local       Type:        section
+       Storage Class:   C_STAT      Basic Type:  void
+       Section Length:  71          # Relocs:    4
+       # Line Entries:  0                        
+
+    <60> ".debug_info" (defined in section ".debug_info" (30))
+       Value:           0x000013d3  Kind:        defined
+       Binding:         local       Type:        section
+       Storage Class:   C_STAT      Basic Type:  void
+       Section Length:  1157        # Relocs:    31
+       # Line Entries:  0                        
+
+    <62> "epilog.asm"
+       Value:          0x00000000  Kind:        debug
+       Binding:        local       Type:        file
+       Storage Class:  C_FILE      Basic Type:  void
+
+    <63> ".debug_line" (defined in section ".debug_line" (32))
+       Value:           0x00000195  Kind:        defined
+       Binding:         local       Type:        section
+       Storage Class:   C_STAT      Basic Type:  void
+       Section Length:  63          # Relocs:    4
+       # Line Entries:  0                        
+
+    <65> "memcpy.asm"
+       Value:          0x00000000  Kind:        debug
+       Binding:        local       Type:        file
+       Storage Class:  C_FILE      Basic Type:  void
+
+    <66> ".debug_line" (defined in section ".debug_line" (32))
+       Value:           0x000001bf  Kind:        defined
+       Binding:         local       Type:        section
+       Storage Class:   C_STAT      Basic Type:  void
+       Section Length:  67          # Relocs:    4
+       # Line Entries:  0                        
+
+    <68> ".debug_info" (defined in section ".debug_info" (30))
+       Value:           0x00001762  Kind:        defined
+       Binding:         local       Type:        section
+       Storage Class:   C_STAT      Basic Type:  void
+       Section Length:  851         # Relocs:    16
+       # Line Entries:  0                        
+
+    <70> ".debug_info" (defined in section ".debug_info" (30))
+       Value:           0x0000198f  Kind:        defined
+       Binding:         local       Type:        section
+       Storage Class:   C_STAT      Basic Type:  void
+       Section Length:  0           # Relocs:    0
+       # Line Entries:  0                        
+
+    <72> "IE1"
+       Value:          0x00000000  Kind:        absolute
+       Binding:        global      Type:        none
+       Storage Class:  C_EXT       Basic Type:  void
+
+    <73> "IFG1"
+       Value:          0x00000002  Kind:        absolute
+       Binding:        global      Type:        none
+       Storage Class:  C_EXT       Basic Type:  void
+
+    <74> "DCOCTL"
+       Value:          0x00000056  Kind:        absolute
+       Binding:        global      Type:        none
+       Storage Class:  C_EXT       Basic Type:  void
+
+    <75> "BCSCTL1"
+       Value:          0x00000057  Kind:        absolute
+       Binding:        global      Type:        none
+       Storage Class:  C_EXT       Basic Type:  void
+
+    <76> "BCSCTL2"
+       Value:          0x00000058  Kind:        absolute
+       Binding:        global      Type:        none
+       Storage Class:  C_EXT       Basic Type:  void
+
+    <77> "BCSCTL3"
+       Value:          0x00000053  Kind:        absolute
+       Binding:        global      Type:        none
+       Storage Class:  C_EXT       Basic Type:  void
+
+    <78> "CACTL1"
+       Value:          0x00000059  Kind:        absolute
+       Binding:        global      Type:        none
+       Storage Class:  C_EXT       Basic Type:  void
+
+    <79> "CACTL2"
+       Value:          0x0000005a  Kind:        absolute
+       Binding:        global      Type:        none
+       Storage Class:  C_EXT       Basic Type:  void
+
+    <80> "CAPD"
+       Value:          0x0000005b  Kind:        absolute
+       Binding:        global      Type:        none
+       Storage Class:  C_EXT       Basic Type:  void
+
+    <81> "FCTL1"
+       Value:          0x00000128  Kind:        absolute
+       Binding:        global      Type:        none
+       Storage Class:  C_EXT       Basic Type:  void
+
+    <82> "FCTL2"
+       Value:          0x0000012a  Kind:        absolute
+       Binding:        global      Type:        none
+       Storage Class:  C_EXT       Basic Type:  void
+
+    <83> "FCTL3"
+       Value:          0x0000012c  Kind:        absolute
+       Binding:        global      Type:        none
+       Storage Class:  C_EXT       Basic Type:  void
+
+    <84> "P1IN"
+       Value:          0x00000020  Kind:        absolute
+       Binding:        global      Type:        none
+       Storage Class:  C_EXT       Basic Type:  void
+
+    <85> "P1OUT"
+       Value:          0x00000021  Kind:        absolute
+       Binding:        global      Type:        none
+       Storage Class:  C_EXT       Basic Type:  void
+
+    <86> "P1DIR"
+       Value:          0x00000022  Kind:        absolute
+       Binding:        global      Type:        none
+       Storage Class:  C_EXT       Basic Type:  void
+
+    <87> "P1IFG"
+       Value:          0x00000023  Kind:        absolute
+       Binding:        global      Type:        none
+       Storage Class:  C_EXT       Basic Type:  void
+
+    <88> "P1IES"
+       Value:          0x00000024  Kind:        absolute
+       Binding:        global      Type:        none
+       Storage Class:  C_EXT       Basic Type:  void
+
+    <89> "P1IE"
+       Value:          0x00000025  Kind:        absolute
+       Binding:        global      Type:        none
+       Storage Class:  C_EXT       Basic Type:  void
+
+    <90> "P1SEL"
+       Value:          0x00000026  Kind:        absolute
+       Binding:        global      Type:        none
+       Storage Class:  C_EXT       Basic Type:  void
+
+    <91> "P1REN"
+       Value:          0x00000027  Kind:        absolute
+       Binding:        global      Type:        none
+       Storage Class:  C_EXT       Basic Type:  void
+
+    <92> "P2IN"
+       Value:          0x00000028  Kind:        absolute
+       Binding:        global      Type:        none
+       Storage Class:  C_EXT       Basic Type:  void
+
+    <93> "P2OUT"
+       Value:          0x00000029  Kind:        absolute
+       Binding:        global      Type:        none
+       Storage Class:  C_EXT       Basic Type:  void
+
+    <94> "P2DIR"
+       Value:          0x0000002a  Kind:        absolute
+       Binding:        global      Type:        none
+       Storage Class:  C_EXT       Basic Type:  void
+
+    <95> "P2IFG"
+       Value:          0x0000002b  Kind:        absolute
+       Binding:        global      Type:        none
+       Storage Class:  C_EXT       Basic Type:  void
+
+    <96> "P2IES"
+       Value:          0x0000002c  Kind:        absolute
+       Binding:        global      Type:        none
+       Storage Class:  C_EXT       Basic Type:  void
+
+    <97> "P2IE"
+       Value:          0x0000002d  Kind:        absolute
+       Binding:        global      Type:        none
+       Storage Class:  C_EXT       Basic Type:  void
+
+    <98> "P2SEL"
+       Value:          0x0000002e  Kind:        absolute
+       Binding:        global      Type:        none
+       Storage Class:  C_EXT       Basic Type:  void
+
+    <99> "P2REN"
+       Value:          0x0000002f  Kind:        absolute
+       Binding:        global      Type:        none
+       Storage Class:  C_EXT       Basic Type:  void
+
+    <100> "TAIV"
+       Value:          0x0000012e  Kind:        absolute
+       Binding:        global      Type:        none
+       Storage Class:  C_EXT       Basic Type:  void
+
+    <101> "TACTL"
+       Value:          0x00000160  Kind:        absolute
+       Binding:        global      Type:        none
+       Storage Class:  C_EXT       Basic Type:  void
+
+    <102> "TACCTL0"
+       Value:          0x00000162  Kind:        absolute
+       Binding:        global      Type:        none
+       Storage Class:  C_EXT       Basic Type:  void
+
+    <103> "TACCTL1"
+       Value:          0x00000164  Kind:        absolute
+       Binding:        global      Type:        none
+       Storage Class:  C_EXT       Basic Type:  void
+
+    <104> "TAR"
+       Value:          0x00000170  Kind:        absolute
+       Binding:        global      Type:        none
+       Storage Class:  C_EXT       Basic Type:  void
+
+    <105> "TACCR0"
+       Value:          0x00000172  Kind:        absolute
+       Binding:        global      Type:        none
+       Storage Class:  C_EXT       Basic Type:  void
+
+    <106> "TACCR1"
+       Value:          0x00000174  Kind:        absolute
+       Binding:        global      Type:        none
+       Storage Class:  C_EXT       Basic Type:  void
+
+    <107> "WDTCTL"
+       Value:          0x00000120  Kind:        absolute
+       Binding:        global      Type:        none
+       Storage Class:  C_EXT       Basic Type:  void
+
+    <108> "CALDCO_1MHZ"
+       Value:          0x000010fe  Kind:        absolute
+       Binding:        global      Type:        none
+       Storage Class:  C_EXT       Basic Type:  void
+
+    <109> "CALBC1_1MHZ"
+       Value:          0x000010ff  Kind:        absolute
+       Binding:        global      Type:        none
+       Storage Class:  C_EXT       Basic Type:  void
+
+    <110> "cinit"
+       Value:          0xffffffff  Kind:        absolute
+       Binding:        global      Type:        none
+       Storage Class:  C_EXT       Basic Type:  void
+
+    <111> "__cinit__"
+       Value:          0xffffffff  Kind:        absolute
+       Binding:        global      Type:        none
+       Storage Class:  C_EXT       Basic Type:  void
+
+    <112> "pinit"
+       Value:          0xffffffff  Kind:        absolute
+       Binding:        global      Type:        none
+       Storage Class:  C_EXT       Basic Type:  void
+
+    <113> "__pinit__"
+       Value:          0xffffffff  Kind:        absolute
+       Binding:        global      Type:        none
+       Storage Class:  C_EXT       Basic Type:  void
+
+    <114> "binit"
+       Value:          0xffffffff  Kind:        absolute
+       Binding:        global      Type:        none
+       Storage Class:  C_EXT       Basic Type:  void
+
+    <115> "__binit__"
+       Value:          0xffffffff  Kind:        absolute
+       Binding:        global      Type:        none
+       Storage Class:  C_EXT       Basic Type:  void
+
+    <116> "__STACK_SIZE"
+       Value:          0x00000032  Kind:        absolute
+       Binding:        global      Type:        none
+       Storage Class:  C_EXT       Basic Type:  void
+
+    <117> "__STACK_END" (defined in section ".stack" (4))
+       Value:          0x0000027e  Kind:        defined
+       Binding:        global      Type:        object
+       Storage Class:  C_EXT       Basic Type:  void
+
+    <118> "__c_args__"
+       Value:          0xffffffff  Kind:        absolute
+       Binding:        global      Type:        none
+       Storage Class:  C_EXT       Basic Type:  void
+
+    <119> ".text" (defined in section ".text" (5))
+       Value:          0x0000f800  Kind:        defined
+       Binding:        global      Type:        object
+       Storage Class:  C_EXT       Basic Type:  void
+
+    <120> "__text__" (defined in section ".text" (5))
+       Value:          0x0000f800  Kind:        defined
+       Binding:        global      Type:        object
+       Storage Class:  C_EXT       Basic Type:  void
+
+    <121> "etext" (defined in section ".text" (5))
+       Value:          0x0000f84e  Kind:        defined
+       Binding:        global      Type:        object
+       Storage Class:  C_EXT       Basic Type:  void
+
+    <122> "__etext__" (defined in section ".text" (5))
+       Value:          0x0000f84e  Kind:        defined
+       Binding:        global      Type:        object
+       Storage Class:  C_EXT       Basic Type:  void
+
+    <123> ".bss" (defined in section ".bss" (2))
+       Value:          0x00000200  Kind:        defined
+       Binding:        global      Type:        object
+       Storage Class:  C_EXT       Basic Type:  void
+
+    <124> "__bss__" (defined in section ".bss" (2))
+       Value:          0x00000200  Kind:        defined
+       Binding:        global      Type:        object
+       Storage Class:  C_EXT       Basic Type:  void
+
+    <125> "end" (defined in section ".bss" (2))
+       Value:          0x00000208  Kind:        defined
+       Binding:        global      Type:        object
+       Storage Class:  C_EXT       Basic Type:  void
+
+    <126> "__end__" (defined in section ".bss" (2))
+       Value:          0x00000208  Kind:        defined
+       Binding:        global      Type:        object
+       Storage Class:  C_EXT       Basic Type:  void
+
+    <127> "main" (defined in section ".text" (5))
+       Value:          0x0000f800  Kind:        defined
+       Binding:        global      Type:        object
+       Storage Class:  C_EXT       Basic Type:  int
+
+    <128> "_c_int00" (defined in section ".text" (5))
+       Value:          0x0000f826  Kind:        defined
+       Binding:        global      Type:        object
+       Storage Class:  C_EXT       Basic Type:  int
+
+    <129> "_dtors_ptr" (defined in section ".bss" (2))
+       Value:          0x00000206  Kind:        defined
+       Binding:        global      Type:        object
+       Storage Class:  C_EXT       Basic Type:  int
+
+    <130> "_cleanup_ptr" (defined in section ".bss" (2))
+       Value:          0x00000204  Kind:        defined
+       Binding:        global      Type:        object
+       Storage Class:  C_EXT       Basic Type:  int
+
+    <131> "_stack" (defined in section ".stack" (4))
+       Value:          0x0000024c  Kind:        defined
+       Binding:        global      Type:        object
+       Storage Class:  C_EXT       Basic Type:  int
+
+    <132> "_c_int00_noinit_noexit" (defined in section ".text" (5))
+       Value:          0x0000f826  Kind:        defined
+       Binding:        global      Type:        object
+       Storage Class:  C_EXT       Basic Type:  int
+
+    <133> "_reset_vector" (defined in section ".reset" (29))
+       Value:          0x0000fffe  Kind:        defined
+       Binding:        global      Type:        object
+       Storage Class:  C_EXT       Basic Type:  int
+
+    <134> "C$$EXIT" (defined in section ".text" (5))
+       Value:          0x0000f848  Kind:        defined
+       Binding:        global      Type:        object
+       Storage Class:  C_EXT       Basic Type:  int
+
+    <135> "abort" (defined in section ".text" (5))
+       Value:          0x0000f848  Kind:        defined
+       Binding:        global      Type:        object
+       Storage Class:  C_EXT       Basic Type:  int
+
+    <136> "__TI_exit"
+       Value:          0x00000001  Kind:        absolute
+       Binding:        global      Type:        none
+       Storage Class:  C_EXT       Basic Type:  int
+
+    <137> "_system_pre_init" (defined in section ".text" (5))
+       Value:          0x0000f844  Kind:        defined
+       Binding:        global      Type:        object
+       Storage Class:  C_EXT       Basic Type:  int
+
+    <138> "_nop" (defined in section ".text" (5))
+       Value:          0x0000f84c  Kind:        defined
+       Binding:        global      Type:        object
+       Storage Class:  C_EXT       Basic Type:  int
+
+    <139> "_lock" (defined in section ".bss" (2))
+       Value:          0x00000200  Kind:        defined
+       Binding:        global      Type:        object
+       Storage Class:  C_EXT       Basic Type:  int
+
+    <140> "_unlock" (defined in section ".bss" (2))
+       Value:          0x00000202  Kind:        defined
+       Binding:        global      Type:        object
+       Storage Class:  C_EXT       Basic Type:  int
+
+    <141> "__TI_args_main"
+       Value:          0x00000001  Kind:        absolute
+       Binding:        global      Type:        none
+       Storage Class:  C_EXT       Basic Type:  int
+
+    <142> "__TI_auto_init"
+       Value:          0x00000001  Kind:        absolute
+       Binding:        global      Type:        none
+       Storage Class:  C_EXT       Basic Type:  int
+
+
+ String Table
+
+    offset  string                        
+    ------  ------                        
+         4  "$C$DW$L$main$2$B"            
+        21  "$C$DW$L$main$3$B"            
+        38  "$C$DW$L$main$2$E"            
+        55  "$C$DW$L$main$4$B"            
+        72  "$C$DW$L$main$3$E"            
+        89  "$C$DW$L$main$4$E"            
+       106  ".text:main"                  
+       117  ".debug_line"                 
+       129  ".debug_info"                 
+       141  ".text:_c_int00_noinit_noexit"
+       170  ".text:abort"                 
+       182  "pre_init.asm"                
+       195  ".text:_system_pre_init"      
+       218  "_lock.asm"                   
+       228  ".text:_nop"                  
+       239  "args_main.asm"               
+       253  "autoinit.asm"                
+       266  "epilog.asm"                  
+       277  "memcpy.asm"                  
+       288  "CALDCO_1MHZ"                 
+       300  "CALBC1_1MHZ"                 
+       312  "__cinit__"                   
+       322  "__pinit__"                   
+       332  "__binit__"                   
+       342  "__STACK_SIZE"                
+       355  "__STACK_END"                 
+       367  "__c_args__"                  
+       378  "__etext__"                   
+       388  "_dtors_ptr"                  
+       399  "_cleanup_ptr"                
+       412  "_c_int00_noinit_noexit"      
+       435  "_reset_vector"               
+       449  "__TI_exit"                   
+       459  "_system_pre_init"            
+       476  "__TI_args_main"              
+       491  "__TI_auto_init"              
+       506  "$build.attributes"           
+       524  ".debug_frame"                
+       537  ".debug_abbrev"               

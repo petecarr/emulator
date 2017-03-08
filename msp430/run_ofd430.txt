@@ -1,0 +1,5 @@
+#/bin/bash
+echo 'parsing COFF'
+/drives/C/Program\ Files\ \(x86\)/Texas\ Instruments/ccsv4/tools/compiler/msp430/bin/ofd430 -v  "HelloWorld.out" >> coff_parse1.txt 
+echo 'Done'
+

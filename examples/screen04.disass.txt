@@ -1,0 +1,813 @@
+Filename is <c:\Users\pete\Raspberry\home_pi\Emulator\screen04.kernel.img>
+00000000 ea0020ce  b        0x8340
+*** gap of 32764 bytes
+00008000 e3500801  cmp      r0, #65536 (0x10000)
+00008004 81a0f00e  movhi    pc, lr
+00008008 01a0f00e  moveq    pc, lr
+0000800c e59f11b4  ldr      r1, [pc+436]
+00008010 e1c100b0  strh     r0, [r1]
+00008014 e1a0f00e  mov      pc, lr
+00008018 e59f11ac  ldr      r1, [pc+428]
+0000801c e5810000  str      r0, [r1]
+00008020 e1a0f00e  mov      pc, lr
+00008024 e59f21a0  ldr      r2, [pc+416]
+00008028 e5922000  ldr      r2, [r2]
+0000802c e5923004  ldr      r3, [r2+4]
+00008030 e2433001  sub      r3, r3, #1 (0x1)
+00008034 e1510003  cmp      r1, r3
+00008038 81a0f00e  movhi    pc, lr
+0000803c e5923000  ldr      r3, [r2]
+00008040 e2433001  sub      r3, r3, #1 (0x1)
+00008044 e1500003  cmp      r0, r3
+00008048 81a0f00e  movhi    pc, lr
+0000804c e5922020  ldr      r2, [r2+32]
+00008050 e2833001  add      r3, r3, #1 (0x1)
+00008054 e0200391  mla      r0, r1, r3, r0
+00008058 e0822080  add      r2, r2, r0, lsl #1
+0000805c e59f3164  ldr      r3, [pc+356]
+00008060 e1d330b0  ldrh     r3, [r3]
+00008064 e1c230b0  strh     r3, [r2]
+00008068 e1a0f00e  mov      pc, lr
+0000806c e92d5ff0  push     {r4,r5,r6,r7,r8,r9,r10,r11,r12,lr}
+00008070 e1a09000  mov      r9, r0
+00008074 e1a0a002  mov      r10, r2
+00008078 e1a0b001  mov      r11, r1
+0000807c e1a0c003  mov      r12, r3
+00008080 e159000a  cmp      r9, r10
+00008084 c049400a  subgt    r4, r9, r10
+00008088 c3e06000  mvngt    r6, #0 (0x0)
+0000808c d04a4009  suble    r4, r10, r9
+00008090 d3a06001  movle    r6, #1 (0x1)
+00008094 e15b000c  cmp      r11, r12
+00008098 c04c500b  subgt    r5, r12, r11
+0000809c c3e07000  mvngt    r7, #0 (0x0)
+000080a0 d04b500c  suble    r5, r11, r12
+000080a4 d3a07001  movle    r7, #1 (0x1)
+000080a8 e0848005  add      r8, r4, r5
+000080ac e08aa006  add      r10, r10, r6
+000080b0 e08cc007  add      r12, r12, r7
+000080b4 e139000a  teq      r9, r10
+000080b8 113b000c  teqne    r11, r12
+000080bc 08bd9ff0  popeq    {r4,r5,r6,r7,r8,r9,r10,r11,r12,pc}
+000080c0 e1a00009  mov      r0, r9
+000080c4 e1a0100b  mov      r1, r11
+000080c8 ebffffd5  bl       0x8024
+000080cc e1550088  cmp      r5, r8, lsl #1
+000080d0 d0888005  addle    r8, r8, r5
+000080d4 d0899006  addle    r9, r9, r6
+000080d8 e1540088  cmp      r4, r8, lsl #1
+000080dc a0888004  addge    r8, r8, r4
+000080e0 a08bb007  addge    r11, r11, r7
+000080e4 eafffff2  b        0x80b4
+000080e8 e350007f  cmp      r0, #127 (0x7f)
+000080ec 83a00000  movhi    r0, #0 (0x0)
+000080f0 83a01000  movhi    r1, #0 (0x0)
+000080f4 81a0f00e  movhi    pc, lr
+000080f8 e1a04001  mov      r4, r1
+000080fc e1a05002  mov      r5, r2
+00008100 e92d41f0  push     {r4,r5,r6,r7,r8,lr}
+00008104 e59f60c4  ldr      r6, [pc+196]
+00008108 e0866200  add      r6, r6, r0, lsl #4
+0000810c e5d67000  ldrb     r7, [r6]
+00008110 e3a08008  mov      r8, #8 (0x8)
+00008114 e2588001  subs     r8, r8, #1 (0x1)
+00008118 ba000006  blt      0x8138
+0000811c e1a07087  mov      r7, r7, lsl #1
+00008120 e3170c01  tst      r7, #256 (0x100)
+00008124 0afffffa  beq      0x8114
+00008128 e0840008  add      r0, r4, r8
+0000812c e1a01005  mov      r1, r5
+00008130 ebffffbb  bl       0x8024
+00008134 eafffff6  b        0x8114
+00008138 e2855001  add      r5, r5, #1 (0x1)
+0000813c e2866001  add      r6, r6, #1 (0x1)
+00008140 e316000f  tst      r6, #15 (0xf)
+00008144 1afffff0  bne      0x810c
+00008148 e3a00008  mov      r0, #8 (0x8)
+0000814c e3a01010  mov      r1, #16 (0x10)
+00008150 e8bd81f0  pop      {r4,r5,r6,r7,r8,pc}
+00008154 e92d43f0  push     {r4,r5,r6,r7,r8,r9,lr}
+00008158 e1a07000  mov      r7, r0
+0000815c e1a04002  mov      r4, r2
+00008160 e1a06004  mov      r6, r4
+00008164 e1a05003  mov      r5, r3
+00008168 e1a08001  mov      r8, r1
+0000816c e2588001  subs     r8, r8, #1 (0x1)
+00008170 ba000013  blt      0x81c4
+00008174 e5d79000  ldrb     r9, [r7]
+00008178 e2877001  add      r7, r7, #1 (0x1)
+0000817c e1a00009  mov      r0, r9
+00008180 e1a01004  mov      r1, r4
+00008184 e1a02005  mov      r2, r5
+00008188 ebffffd6  bl       0x80e8
+0000818c e339000a  teq      r9, #10 (0xa)
+00008190 01a04006  moveq    r4, r6
+00008194 00855001  addeq    r5, r5, r1
+00008198 0afffff3  beq      0x816c
+0000819c e3390009  teq      r9, #9 (0x9)
+000081a0 10844000  addne    r4, r4, r0
+000081a4 1afffff0  bne      0x816c
+000081a8 e0800100  add      r0, r0, r0, lsl #2
+000081ac e1a01006  mov      r1, r6
+000081b0 e0811000  add      r1, r1, r0
+000081b4 e1540001  cmp      r4, r1
+000081b8 aafffffc  bge      0x81b0
+000081bc e1a04001  mov      r4, r1
+000081c0 eaffffe9  b        0x816c
+000081c4 e8bd83f0  pop      {r4,r5,r6,r7,r8,r9,pc}
+000081c8 00009000  andeq    r9, r0, r0
+000081cc 00009004  andeq    r9, r0, r4
+000081d0 00009010  andeq    r9, r0, r0 lsl by r0
+000081d4 e3500a01  cmp      r0, #4096 (0x1000)
+000081d8 93510a01  cmpls    r1, #4096 (0x1000)
+000081dc 93520020  cmpls    r2, #32 (0x20)
+000081e0 83a00000  movhi    r0, #0 (0x0)
+000081e4 81a0f00e  movhi    pc, lr
+000081e8 e92d4010  push     {r4,lr}
+000081ec e59f4044  ldr      r4, [pc+68]
+000081f0 e5840000  str      r0, [r4]
+000081f4 e5841004  str      r1, [r4+4]
+000081f8 e5840008  str      r0, [r4+8]
+000081fc e584100c  str      r1, [r4+12]
+00008200 e5842014  str      r2, [r4+20]
+00008204 e1a00004  mov      r0, r4
+00008208 e3a01001  mov      r1, #1 (0x1)
+0000820c eb00003f  bl       0x8310
+00008210 e3a00001  mov      r0, #1 (0x1)
+00008214 eb000030  bl       0x82dc
+00008218 e3300000  teq      r0, #0 (0x0)
+0000821c 13a00000  movne    r0, #0 (0x0)
+00008220 18bd8010  popne    {r4,pc}
+00008224 e5940020  ldr      r0, [r4+32]
+00008228 e3300000  teq      r0, #0 (0x0)
+0000822c 0afffffc  beq      0x8224
+00008230 e1a00004  mov      r0, r4
+00008234 e8bd8010  pop      {r4,pc}
+00008238 0000a000  andeq    r10, r0, r0
+0000823c e59f008c  ldr      r0, [pc+140]
+00008240 e1a0f00e  mov      pc, lr
+00008244 e3500035  cmp      r0, #53 (0x35)
+00008248 93510007  cmpls    r1, #7 (0x7)
+0000824c 81a0f00e  movhi    pc, lr
+00008250 e92d4000  push     {lr}
+00008254 e1a02000  mov      r2, r0
+00008258 ebfffff7  bl       0x823c
+0000825c e3520009  cmp      r2, #9 (0x9)
+00008260 8242200a  subhi    r2, r2, #10 (0xa)
+00008264 82800004  addhi    r0, r0, #4 (0x4)
+00008268 8afffffb  bhi      0x825c
+0000826c e0822082  add      r2, r2, r2, lsl #1
+00008270 e1a01211  mov      r1, r1 lsl by r2
+00008274 e3a03007  mov      r3, #7 (0x7)
+00008278 e1a03213  mov      r3, r3 lsl by r2
+0000827c e1e03003  mvn      r3, r3
+00008280 e5902000  ldr      r2, [r0]
+00008284 e0022003  and      r2, r2, r3
+00008288 e1811002  orr      r1, r1, r2
+0000828c e5801000  str      r1, [r0]
+00008290 e8bd8000  pop      {pc}
+00008294 e3500035  cmp      r0, #53 (0x35)
+00008298 81a0f00e  movhi    pc, lr
+0000829c e92d4000  push     {lr}
+000082a0 e1a02000  mov      r2, r0
+000082a4 ebffffe4  bl       0x823c
+000082a8 e1a032a2  mov      r3, r2, lsr #5
+000082ac e1a03103  mov      r3, r3, lsl #2
+000082b0 e0800003  add      r0, r0, r3
+000082b4 e202201f  and      r2, r2, #31 (0x1f)
+000082b8 e3a03001  mov      r3, #1 (0x1)
+000082bc e1a03213  mov      r3, r3 lsl by r2
+000082c0 e3310000  teq      r1, #0 (0x0)
+000082c4 05803028  streq    r3, [r0+40]
+000082c8 1580301c  strne    r3, [r0+28]
+000082cc e8bd8000  pop      {pc}
+000082d0 20200000  eorcs    r0, r0, r0
+000082d4 e59f0060  ldr      r0, [pc+96]
+000082d8 e1a0f00e  mov      pc, lr
+000082dc e200300f  and      r3, r0, #15 (0xf)
+000082e0 e1a0200e  mov      r2, lr
+000082e4 ebfffffa  bl       0x82d4
+000082e8 e1a0e002  mov      lr, r2
+000082ec e5902018  ldr      r2, [r0+24]
+000082f0 e3120101  tst      r2, #1073741824 (0x40000000)
+000082f4 1afffffc  bne      0x82ec
+000082f8 e5901000  ldr      r1, [r0]
+000082fc e201200f  and      r2, r1, #15 (0xf)
+00008300 e1320003  teq      r2, r3
+00008304 1afffff8  bne      0x82ec
+00008308 e3c1000f  bic      r0, r1, #15 (0xf)
+0000830c e1a0f00e  mov      pc, lr
+00008310 e201200f  and      r2, r1, #15 (0xf)
+00008314 e3c0100f  bic      r1, r0, #15 (0xf)
+00008318 e1811002  orr      r1, r1, r2
+0000831c e1a0200e  mov      r2, lr
+00008320 ebffffeb  bl       0x82d4
+00008324 e1a0e002  mov      lr, r2
+00008328 e5902018  ldr      r2, [r0+24]
+0000832c e3120102  tst      r2, #2147483648 (0x80000000)
+00008330 1afffffc  bne      0x8328
+00008334 e5801020  str      r1, [r0+32]
+00008338 e1a0f00e  mov      pc, lr
+0000833c 2000b880  andcs    r11, r0, r0, lsl #17
+00008340 e3a0d902  mov      sp, #32768 (0x8000)
+00008344 e3a00b01  mov      r0, #1024 (0x400)
+00008348 e3a01c03  mov      r1, #768 (0x300)
+0000834c e3a02010  mov      r2, #16 (0x10)
+00008350 ebffff9f  bl       0x81d4
+00008354 e3300000  teq      r0, #0 (0x0)
+00008358 1a000006  bne      0x8378
+0000835c e3a00010  mov      r0, #16 (0x10)
+00008360 e3a01001  mov      r1, #1 (0x1)
+00008364 ebffffb6  bl       0x8244
+00008368 e3a00010  mov      r0, #16 (0x10)
+0000836c e3a01000  mov      r1, #0 (0x0)
+00008370 ebffffc7  bl       0x8294
+00008374 eafffffe  b        0x8374
+00008378 e1a04000  mov      r4, r0
+0000837c ebffff25  bl       0x8018
+00008380 e3a04000  mov      r4, #0 (0x0)
+00008384 e59f0060  ldr      r0, [pc+96]
+00008388 e3a01015  mov      r1, #21 (0x15)
+0000838c e59f205c  ldr      r2, [pc+92]
+00008390 e1a03224  mov      r3, r4, lsr #4
+00008394 e92d0008  push     {r3}
+00008398 e92d0008  push     {r3}
+0000839c e92d0008  push     {r3}
+000083a0 e92d0008  push     {r3}
+000083a4 eb000081  bl       0x85b0
+000083a8 e28dd010  add      sp, sp, #16 (0x10)
+000083ac e1a01000  mov      r1, r0
+000083b0 e59f0038  ldr      r0, [pc+56]
+000083b4 e3a02000  mov      r2, #0 (0x0)
+000083b8 e1a03004  mov      r3, r4
+000083bc e3530e2f  cmp      r3, #752 (0x2f0)
+000083c0 82433c03  subhi    r3, r3, #768 (0x300)
+000083c4 82822c01  addhi    r2, r2, #256 (0x100)
+000083c8 e3530e2f  cmp      r3, #752 (0x2f0)
+000083cc 82433c03  subhi    r3, r3, #768 (0x300)
+000083d0 82822c01  addhi    r2, r2, #256 (0x100)
+000083d4 e3530e2f  cmp      r3, #752 (0x2f0)
+000083d8 82433c03  subhi    r3, r3, #768 (0x300)
+000083dc 82822c01  addhi    r2, r2, #256 (0x100)
+000083e0 ebffff5b  bl       0x8154
+000083e4 e2844010  add      r4, r4, #16 (0x10)
+000083e8 eaffffe5  b        0x8384
+000083ec 0000b000  andeq    r11, r0, r0
+000083f0 0000b015  andeq    r11, r0, r5 lsl by r0
+000083f4 e16f2f11  clz      r2, r1
+000083f8 e16f3f10  clz      r3, r0
+000083fc e0522003  subs     r2, r2, r3
+00008400 e1a03211  mov      r3, r1 lsl by r2
+00008404 e1a01000  mov      r1, r0
+00008408 e3a00000  mov      r0, #0 (0x0)
+0000840c ba000009  blt      0x8438
+00008410 e1510003  cmp      r1, r3
+00008414 ba000003  blt      0x8428
+00008418 e2800001  add      r0, r0, #1 (0x1)
+0000841c e0511003  subs     r1, r1, r3
+00008420 01a00210  moveq    r0, r0 lsl by r2
+00008424 0a000003  beq      0x8438
+00008428 e2522001  subs     r2, r2, #1 (0x1)
+0000842c a1a030a3  movge    r3, r3, lsr #1
+00008430 a1a00080  movge    r0, r0, lsl #1
+00008434 aafffff5  bge      0x8410
+00008438 e1a0f00e  mov      pc, lr
+0000843c e3a01cef  mov      r1, #61184 (0xef00)
+00008440 e0010190  mul      r1, r0, r1
+00008444 e0010190  mul      r1, r0, r1
+00008448 e0811000  add      r1, r1, r0
+0000844c e2810049  add      r0, r1, #73 (0x49)
+00008450 e1a0f00e  mov      pc, lr
+00008454 e59f0034  ldr      r0, [pc+52]
+00008458 e1a0f00e  mov      pc, lr
+0000845c e92d4000  push     {lr}
+00008460 ebfffffb  bl       0x8454
+00008464 e1c000d4  ldrd     r0, [r0+4]
+00008468 e8bd8000  pop      {pc}
+0000846c e1a02000  mov      r2, r0
+00008470 e92d4000  push     {lr}
+00008474 ebfffff8  bl       0x845c
+00008478 e1a03000  mov      r3, r0
+0000847c ebfffff6  bl       0x845c
+00008480 e0401003  sub      r1, r0, r3
+00008484 e1510002  cmp      r1, r2
+00008488 9afffffb  bls      0x847c
+0000848c e8bd8000  pop      {pc}
+00008490 20003000  andcs    r3, r0, r0
+00008494 e92d4000  push     {lr}
+00008498 e2400001  sub      r0, r0, #1 (0x1)
+0000849c e3500008  cmp      r0, #8 (0x8)
+000084a0 83a00000  movhi    r0, #0 (0x0)
+000084a4 88bd8000  pophi    {pc}
+000084a8 e59f1054  ldr      r1, [pc+84]
+000084ac e0812100  add      r2, r1, r0, lsl #2
+000084b0 e5922000  ldr      r2, [r2]
+000084b4 e3320000  teq      r2, #0 (0x0)
+000084b8 11a00002  movne    r0, r2
+000084bc 18bd8000  popne    {pc}
+000084c0 e5912000  ldr      r2, [r1]
+000084c4 e3320000  teq      r2, #0 (0x0)
+000084c8 13a00000  movne    r0, #0 (0x0)
+000084cc 18bd8000  popne    {pc}
+000084d0 e3a02c01  mov      r2, #256 (0x100)
+000084d4 e92d0010  push     {r4}
+000084d8 e1d230b4  ldrh     r3, [r2+4]
+000084dc e2533001  subs     r3, r3, #1 (0x1)
+000084e0 b8bd0010  poplt    {r4}
+000084e4 bafffff0  blt      0x84ac
+000084e8 e0813103  add      r3, r1, r3, lsl #2
+000084ec e5934000  ldr      r4, [r3]
+000084f0 e3340000  teq      r4, #0 (0x0)
+000084f4 05832000  streq    r2, [r3]
+000084f8 e5923000  ldr      r3, [r2]
+000084fc e0822103  add      r2, r2, r3, lsl #2
+00008500 eafffff4  b        0x84d8
+00008504 0000b015  andeq    r11, r0, r5 lsl by r0
+00008508 e0811000  add      r1, r1, r0
+0000850c e2411001  sub      r1, r1, #1 (0x1)
+00008510 e1510000  cmp      r1, r0
+00008514 91a0f00e  movls    pc, lr
+00008518 e5d02000  ldrb     r2, [r0]
+0000851c e5d13000  ldrb     r3, [r1]
+00008520 e5c03000  strb     r3, [r0]
+00008524 e5c12000  strb     r2, [r1]
+00008528 e2800001  add      r0, r0, #1 (0x1)
+0000852c e2411001  sub      r1, r1, #1 (0x1)
+00008530 eafffff6  b        0x8510
+00008534 e92d40f0  push     {r4,r5,r6,r7,lr}
+00008538 e1a05001  mov      r5, r1
+0000853c e1a06002  mov      r6, r2
+00008540 e3a07000  mov      r7, #0 (0x0)
+00008544 e1a01006  mov      r1, r6
+00008548 ebffffa9  bl       0x83f4
+0000854c e3510009  cmp      r1, #9 (0x9)
+00008550 92811030  addls    r1, r1, #48 (0x30)
+00008554 82811057  addhi    r1, r1, #87 (0x57)
+00008558 e3350000  teq      r5, #0 (0x0)
+0000855c 17c51007  strbne   r1, [r5+ r7]
+00008560 e2877001  add      r7, r7, #1 (0x1)
+00008564 e3300000  teq      r0, #0 (0x0)
+00008568 1afffff5  bne      0x8544
+0000856c e3350000  teq      r5, #0 (0x0)
+00008570 11a00005  movne    r0, r5
+00008574 11a01007  movne    r1, r7
+00008578 1bffffe2  blne     0x8508
+0000857c e1a00007  mov      r0, r7
+00008580 e8bd80f0  pop      {r4,r5,r6,r7,pc}
+00008584 e3500000  cmp      r0, #0 (0x0)
+00008588 aaffffe9  bge      0x8534
+0000858c e2600000  rsb      r0, r0, #0 (0x0)
+00008590 e3310000  teq      r1, #0 (0x0)
+00008594 13a0302d  movne    r3, #45 (0x2d)
+00008598 15c13000  strbne   r3, [r1]
+0000859c 12811001  addne    r1, r1, #1 (0x1)
+000085a0 e92d4000  push     {lr}
+000085a4 ebffffe2  bl       0x8534
+000085a8 e2800001  add      r0, r0, #1 (0x1)
+000085ac e8bd8000  pop      {pc}
+000085b0 e92d43f0  push     {r4,r5,r6,r7,r8,r9,lr}
+000085b4 e1a04000  mov      r4, r0
+000085b8 e1a05001  mov      r5, r1
+000085bc e1a06002  mov      r6, r2
+000085c0 e1a07003  mov      r7, r3
+000085c4 e28d801c  add      r8, sp, #28 (0x1c)
+000085c8 e3a09000  mov      r9, #0 (0x0)
+000085cc e2555001  subs     r5, r5, #1 (0x1)
+000085d0 b1a00009  movlt    r0, r9
+000085d4 b8bd83f0  poplt    {r4,r5,r6,r7,r8,r9,pc}
+000085d8 e5d40000  ldrb     r0, [r4]
+000085dc e2844001  add      r4, r4, #1 (0x1)
+000085e0 e3300025  teq      r0, #37 (0x25)
+000085e4 0a000004  beq      0x85fc
+000085e8 e3360000  teq      r6, #0 (0x0)
+000085ec 15c60000  strbne   r0, [r6]
+000085f0 12866001  addne    r6, r6, #1 (0x1)
+000085f4 e2899001  add      r9, r9, #1 (0x1)
+000085f8 eafffff3  b        0x85cc
+000085fc e2555001  subs     r5, r5, #1 (0x1)
+00008600 b1a00009  movlt    r0, r9
+00008604 b8bd83f0  poplt    {r4,r5,r6,r7,r8,r9,pc}
+00008608 e5d40000  ldrb     r0, [r4]
+0000860c e2844001  add      r4, r4, #1 (0x1)
+00008610 e3300025  teq      r0, #37 (0x25)
+00008614 0afffff3  beq      0x85e8
+00008618 e3300063  teq      r0, #99 (0x63)
+0000861c 01a00007  moveq    r0, r7
+00008620 05987000  ldreq    r7, [r8]
+00008624 02888004  addeq    r8, r8, #4 (0x4)
+00008628 0affffee  beq      0x85e8
+0000862c e3300073  teq      r0, #115 (0x73)
+00008630 0a000007  beq      0x8654
+00008634 e3300064  teq      r0, #100 (0x64)
+00008638 0a000010  beq      0x8680
+0000863c e3300075  teq      r0, #117 (0x75)
+00008640 13300078  teqne    r0, #120 (0x78)
+00008644 13300062  teqne    r0, #98 (0x62)
+00008648 1330006f  teqne    r0, #111 (0x6f)
+0000864c 0a000015  beq      0x86a8
+00008650 eaffffdd  b        0x85cc
+00008654 e5d70000  ldrb     r0, [r7]
+00008658 e3300030  teq      r0, #48 (0x30)
+0000865c 05987000  ldreq    r7, [r8]
+00008660 02888004  addeq    r8, r8, #4 (0x4)
+00008664 0affffd8  beq      0x85cc
+00008668 e2899001  add      r9, r9, #1 (0x1)
+0000866c e3360000  teq      r6, #0 (0x0)
+00008670 15c60000  strbne   r0, [r6]
+00008674 12866001  addne    r6, r6, #1 (0x1)
+00008678 e2877001  add      r7, r7, #1 (0x1)
+0000867c eafffff4  b        0x8654
+00008680 e1a00007  mov      r0, r7
+00008684 e5987000  ldr      r7, [r8]
+00008688 e2888004  add      r8, r8, #4 (0x4)
+0000868c e1a01006  mov      r1, r6
+00008690 e3a0200a  mov      r2, #10 (0xa)
+00008694 ebffffba  bl       0x8584
+00008698 e3360000  teq      r6, #0 (0x0)
+0000869c 10866000  addne    r6, r6, r0
+000086a0 e0899000  add      r9, r9, r0
+000086a4 eaffffc8  b        0x85cc
+000086a8 e3300075  teq      r0, #117 (0x75)
+000086ac 03a0200a  moveq    r2, #10 (0xa)
+000086b0 e3300078  teq      r0, #120 (0x78)
+000086b4 03a02010  moveq    r2, #16 (0x10)
+000086b8 e3300062  teq      r0, #98 (0x62)
+000086bc 03a02002  moveq    r2, #2 (0x2)
+000086c0 e330006f  teq      r0, #111 (0x6f)
+000086c4 03a02008  moveq    r2, #8 (0x8)
+000086c8 e1a00007  mov      r0, r7
+000086cc e5987000  ldr      r7, [r8]
+000086d0 e2888004  add      r8, r8, #4 (0x4)
+000086d4 e1a01006  mov      r1, r6
+000086d8 ebffff95  bl       0x8534
+000086dc e3360000  teq      r6, #0 (0x0)
+000086e0 10866000  addne    r6, r6, r0
+000086e4 e0899000  add      r9, r9, r0
+000086e8 eaffffb7  b        0x85cc
+*** gap of 2324 bytes
+00009000 0000ffff  streqd   pc, [r0-[pc]]
+*** gap of 540 bytes
+00009220 08000000  stmda    r0, {}
+00009224 08080808  stmda    r8, {r3,r11}
+00009228 08080008  stmda    r8, {r3}
+*** gap of 4 bytes
+00009230 14000000  strneT   r0, [r0]
+00009234 00141414  andeqs   r1, r4, r4 lsl by r4
+*** gap of 8 bytes
+00009240 48480000  stmda    r8, {}
+00009244 2424fe68  strcsT   pc, [r4-3688]
+00009248 1212147f  andnes   r1, r2, #2130706432 (0x7f000000)
+*** gap of 4 bytes
+00009250 10000000  andne    r0, r0, r0
+00009254 1c12927c  ldc2     p2, c9, [r2 + 0x1f0]
+00009258 7c929070  ldc2     p0, c9, [r2 + 0x1c0]
+0000925c 00001010  andeq    r1, r0, r0 lsl by r0
+00009260 06000000  streqT   r0, [r0- r0]
+00009264 38460909  stmda    r6, {r0,r3,r8,r11}
+00009268 60909066  addvss   r9, r0, r6, ror #32
+*** gap of 4 bytes
+00009270 38000000  stmda    r0, {}
+00009274 920c0404  andls    r0, r12, #67108864 (0x4000000)
+00009278 bc46a2b2  stc2l    p2, c10, [r6 + 0x2c8]
+*** gap of 4 bytes
+00009280 08000000  stmda    r0, {}
+00009284 00080808  andeq    r0, r8, r8, lsl #16
+*** gap of 8 bytes
+00009290 10103000  andnes   r3, r0, r0
+00009294 08080808  stmda    r8, {r3,r11}
+00009298 10100808  andnes   r0, r0, r8, lsl #16
+0000929c 00000020  andeq    r0, r0, r0, lsr #32
+000092a0 08080c00  stmda    r8, {r10,r11}
+000092a4 10101010  andnes   r1, r0, r0 lsl by r0
+000092a8 08081010  stmda    r8, {r4,r12}
+000092ac 0000000c  andeq    r0, r0, r12
+000092b0 10000000  andne    r0, r0, r0
+000092b4 d6387c92  ldrleT   r7, [r8- r2, lsl #25]
+000092b8 00000010  andeq    r0, r0, r0 lsl by r0
+*** gap of 8 bytes
+000092c4 7f080808  swi      0x80808
+000092c8 00080808  andeq    r0, r8, r8, lsl #16
+*** gap of 12 bytes
+000092d8 18180000  ldmda    r8, {}
+000092dc 00000408  andeq    r0, r0, r8, lsl #8
+*** gap of 8 bytes
+000092e8 0000001c  andeq    r0, r0, r12 lsl by r0
+*** gap of 12 bytes
+000092f8 18180000  ldmda    r8, {}
+*** gap of 4 bytes
+00009300 40000000  andmi    r0, r0, r0
+00009304 10102020  andnes   r2, r0, r0, lsr #32
+00009308 04080818  streqT   r0, [r8-2072]
+0000930c 00000204  andeq    r0, r0, r4, lsl #4
+00009310 38000000  stmda    r0, {}
+00009314 92828244  addls    r8, r2, #18253611012 (0x440000004)
+00009318 38448282  stmda    r4, {r1,r7,r9,pc}
+*** gap of 4 bytes
+00009320 1c000000  stc2     p0, c0, [r0 + 0x0]
+00009324 10101010  andnes   r1, r0, r0 lsl by r0
+00009328 7c101010  ldc2     p0, c1, [r0 + 0x40]
+*** gap of 4 bytes
+00009330 7c000000  stc2     p0, c0, [r0 + 0x0]
+00009334 408080c2  addmi    r8, r0, r2, asr #1
+00009338 fe041830  mcr      p8, 0, r1, c4, c0 ,1
+*** gap of 4 bytes
+00009340 7c000000  stc2     p0, c0, [r0 + 0x0]
+00009344 38c08082  stmia    r0, {r1,r7,pc}
+00009348 7cc280c0  stc2l    p0, c8, [r2 + 0x300]
+*** gap of 4 bytes
+00009350 60000000  andvs    r0, r0, r0
+00009354 44485850  strbmiT  r5, [r8-2128]
+00009358 4040fe42  submi    pc, r0, r2, asr #28
+*** gap of 4 bytes
+00009360 7e000000  cdp2     p0, 0, c0, c0, c0 
+00009364 c03e0202  eorgts   r0, lr, r2, lsl #4
+00009368 3cc28080  stc2l    p0, c8, [r2 + 0x200]
+*** gap of 4 bytes
+00009370 78000000  stmda    r0, {}
+00009374 c67a0284  ldrbgtT  r0, [r10- r4, lsl #5]
+00009378 78c48282  stmia    r4, {r1,r7,r9,pc}
+*** gap of 4 bytes
+00009380 fe000000  cdp2     p0, 0, c0, c0, c0 
+00009384 20204040  eorcs    r4, r0, r0, asr #32
+00009388 04081810  streqT   r1, [r8-2064]
+*** gap of 4 bytes
+00009390 7c000000  stc2     p0, c0, [r0 + 0x0]
+00009394 7c828282  stc2     p2, c8, [r2 + 0x208]
+00009398 7c868282  stc2     p2, c8, [r6 + 0x208]
+*** gap of 4 bytes
+000093a0 3c000000  stc2     p0, c0, [r0 + 0x0]
+000093a4 c6828246  strgtT   r8, [r2+ r6, asr #4]
+000093a8 3c4280bc  stc2l    p0, c8, [r2 + 0x2f0]
+*** gap of 8 bytes
+000093b4 00181800  andeqs   r1, r8, r0, lsl #16
+000093b8 18180000  ldmda    r8, {}
+*** gap of 8 bytes
+000093c4 00181800  andeqs   r1, r8, r0, lsl #16
+000093c8 18180000  ldmda    r8, {}
+000093cc 00000408  andeq    r0, r0, r8, lsl #8
+*** gap of 4 bytes
+000093d4 0e708000  cdp      p0, 7, c8, c0, c0 
+000093d8 0080700e  addeq    r7, r0, lr
+*** gap of 8 bytes
+000093e4 00fe0000  rsceqs   r0, lr, r0
+000093e8 0000fe00  andeq    pc, r0, r0, lsl #28
+*** gap of 8 bytes
+000093f4 e01c0200  ands     r0, r12, r0, lsl #4
+000093f8 00021ce0  andeq    r1, r2, r0, ror #25
+*** gap of 4 bytes
+00009400 1c000000  stc2     p0, c0, [r0 + 0x0]
+00009404 08102022  ldmda    r0, {r1,r5,sp}
+00009408 08080008  stmda    r8, {r3}
+*** gap of 4 bytes
+00009410 78000000  stmda    r0, {}
+00009414 92e284cc  rscls    r8, r2, #3422552064 (0xcc000000)
+00009418 04e29292  strbeqT  r9, [r2+658]
+0000941c 0000780c  andeq    r7, r0, r12, lsl #16
+00009420 10000000  andne    r0, r0, r0
+00009424 44282828  strmiT   r2, [r8-2088]
+00009428 82c67c44  sbchi    r7, r6, #17408 (0x4400)
+*** gap of 4 bytes
+00009430 7e000000  cdp2     p0, 0, c0, c0, c0 
+00009434 7e828282  cdp2     p2, 8, c8, c2, c2 ,4
+00009438 7e828282  cdp2     p2, 8, c8, c2, c2 ,4
+*** gap of 4 bytes
+00009440 78000000  stmda    r0, {}
+00009444 02020284  andeq    r0, r2, #35433480200 (0x840000008)
+00009448 78840202  stmia    r4, {r1,r9}
+*** gap of 4 bytes
+00009450 3e000000  cdp2     p0, 0, c0, c0, c0 
+00009454 82828242  addhi    r8, r2, #17716740100 (0x420000004)
+00009458 3e428282  cdp2     p2, 4, c8, c2, c2 ,4
+*** gap of 4 bytes
+00009460 fe000000  cdp2     p0, 0, c0, c0, c0 
+00009464 fe020202  cdp2     p2, 0, c0, c2, c2 
+00009468 fe020202  cdp2     p2, 0, c0, c2, c2 
+*** gap of 4 bytes
+00009470 fe000000  cdp2     p0, 0, c0, c0, c0 
+00009474 fe020202  cdp2     p2, 0, c0, c2, c2 
+00009478 02020202  andeq    r0, r2, #536870912 (0x20000000)
+*** gap of 4 bytes
+00009480 78000000  stmda    r0, {}
+00009484 c2020284  andgt    r0, r2, #35433480200 (0x840000008)
+00009488 78848282  stmia    r4, {r1,r7,r9,pc}
+*** gap of 4 bytes
+00009490 82000000  andhi    r0, r0, #0 (0x0)
+00009494 fe828282  cdp2     p2, 8, c8, c2, c2 ,4
+00009498 82828282  addhi    r8, r2, #34896609288 (0x820000008)
+*** gap of 4 bytes
+000094a0 3e000000  cdp2     p0, 0, c0, c0, c0 
+000094a4 08080808  stmda    r8, {r3,r11}
+000094a8 3e080808  cdp2     p8, 0, c0, c8, c8 
+*** gap of 4 bytes
+000094b0 38000000  stmda    r0, {}
+000094b4 20202020  eorcs    r2, r0, r0, lsr #32
+000094b8 1c222020  stc2     p0, c2, [r2 + 0x80]
+*** gap of 4 bytes
+000094c0 42000000  andmi    r0, r0, #0 (0x0)
+000094c4 0e0a1222  cdp      p2, 0, c1, c10, c2 ,1
+000094c8 42222212  eormi    r2, r2, #4831838209 (0x120000001)
+*** gap of 4 bytes
+000094d0 02000000  andeq    r0, r0, #0 (0x0)
+000094d4 02020202  andeq    r0, r2, #536870912 (0x20000000)
+000094d8 fe020202  cdp2     p2, 0, c0, c2, c2 
+*** gap of 4 bytes
+000094e0 c6000000  strgtT   r0, [r0- r0]
+000094e4 aaaaaac6  bge      0x-154bffc
+000094e8 82828292  addhi    r8, r2, #39191576585 (0x920000009)
+*** gap of 4 bytes
+000094f0 86000000  strhiT   r0, [r0- r0]
+000094f4 928a8a86  addls    r8, r10, #548864 (0x86000)
+000094f8 c2c2a2a2  sbcgt    r10, r2, #43486543882 (0xa2000000a)
+*** gap of 4 bytes
+00009500 38000000  stmda    r0, {}
+00009504 82828244  addhi    r8, r2, #18253611012 (0x440000004)
+00009508 38448282  stmda    r4, {r1,r7,r9,pc}
+*** gap of 4 bytes
+00009510 7e000000  cdp2     p0, 0, c0, c0, c0 
+00009514 c28282c2  addgt    r8, r2, #52076478476 (0xc2000000c)
+00009518 0202027e  andeq    r0, r2, #33822867463 (0x7e0000007)
+*** gap of 4 bytes
+00009520 38000000  stmda    r0, {}
+00009524 82828244  addhi    r8, r2, #18253611012 (0x440000004)
+00009528 78448282  stmda    r4, {r1,r7,r9,pc}
+0000952c 00004060  andeq    r4, r0, r0, ror #32
+00009530 7e000000  cdp2     p0, 0, c0, c0, c0 
+00009534 7e8282c2  cdp2     p2, 8, c8, c2, c2 ,6
+00009538 02828242  addeq    r8, r2, #17716740100 (0x420000004)
+*** gap of 4 bytes
+00009540 7c000000  stc2     p0, c0, [r0 + 0x0]
+00009544 7c060286  stc2     p2, c0, [r6 + 0x218]
+00009548 7dc280c0  stc2l    p0, c8, [r2 + 0x300]
+*** gap of 4 bytes
+00009550 7f000000  swi      0x0
+00009554 08080808  stmda    r8, {r3,r11}
+00009558 08080808  stmda    r8, {r3,r11}
+*** gap of 4 bytes
+00009560 82000000  andhi    r0, r0, #0 (0x0)
+00009564 82828282  addhi    r8, r2, #34896609288 (0x820000008)
+00009568 7c828282  stc2     p2, c8, [r2 + 0x208]
+*** gap of 4 bytes
+00009570 82000000  andhi    r0, r0, #0 (0x0)
+00009574 444444c6  strbmiT  r4, [r4-1222]
+00009578 10282828  eorne    r2, r8, r8, lsr #16
+*** gap of 4 bytes
+00009580 81000000  tsthi    r0, r0
+00009584 5a5a8181  bpl      0x16a9b90
+00009588 6666665a  strbvsT  r6, [r6- r10, asr #12]
+*** gap of 4 bytes
+00009590 c6000000  strgtT   r0, [r0- r0]
+00009594 10382844  eornes   r2, r8, r4, asr #16
+00009598 82446c28  subhi    r6, r4, #10240 (0x2800)
+*** gap of 4 bytes
+000095a0 41000000  tstmi    r0, r0
+000095a4 08141422  ldmda    r4, {r1,r5,r10,r12}
+000095a8 08080808  stmda    r8, {r3,r11}
+*** gap of 4 bytes
+000095b0 fe000000  cdp2     p0, 0, c0, c0, c0 
+000095b4 102060c0  eorne    r6, r0, r0, asr #1
+000095b8 fe060c08  cdp2     p12, 0, c0, c6, c8 
+*** gap of 4 bytes
+000095c0 08083800  stmda    r8, {r11,r12,sp}
+000095c4 08080808  stmda    r8, {r3,r11}
+000095c8 08080808  stmda    r8, {r3,r11}
+000095cc 00000038  andeq    r0, r0, r8 lsr by r0
+000095d0 02000000  andeq    r0, r0, #0 (0x0)
+000095d4 08080404  stmda    r8, {r2,r10}
+000095d8 20101018  andcss   r1, r0, r8 lsl by r0
+000095dc 00004020  andeq    r4, r0, r0, lsr #32
+000095e0 10101c00  andnes   r1, r0, r0, lsl #24
+000095e4 10101010  andnes   r1, r0, r0 lsl by r0
+000095e8 10101010  andnes   r1, r0, r0 lsl by r0
+000095ec 0000001c  andeq    r0, r0, r12 lsl by r0
+000095f0 08000000  stmda    r0, {}
+000095f4 00632214  rsbeq    r2, r3, r4 lsl by r2
+*** gap of 20 bytes
+0000960c 007f0000  rsbeqs   r0, pc, r0
+00009610 10080000  andne    r0, r8, r0
+*** gap of 16 bytes
+00009624 40443800  submi    r3, r4, r0, lsl #16
+00009628 5c62427c  stc2l    p2, c4, [r2 + 0x1f0]
+*** gap of 4 bytes
+00009630 02020200  andeq    r0, r2, #0 (0x0)
+00009634 42663e02  rsbmi    r3, r6, #32 (0x20)
+00009638 3e664242  cdp2     p2, 6, c4, c6, c2 ,2
+*** gap of 8 bytes
+00009644 02443800  subeq    r3, r4, #0 (0x0)
+00009648 38440202  stmda    r4, {r1,r9}
+*** gap of 4 bytes
+00009650 40404000  submi    r4, r0, r0
+00009654 42667c40  rsbmi    r7, r6, #16384 (0x4000)
+00009658 7c664242  stc2l    p2, c4, [r6 + 0x108]
+*** gap of 8 bytes
+00009664 42663c00  rsbmi    r3, r6, #0 (0x0)
+00009668 3c46027e  stc2l    p2, c0, [r6 + 0x1f8]
+*** gap of 4 bytes
+00009670 08083000  stmda    r8, {r12,sp}
+00009674 08083e08  stmda    r8, {r3,r9,r10,r11,r12,sp}
+00009678 08080808  stmda    r8, {r3,r11}
+*** gap of 8 bytes
+00009684 42667c00  rsbmi    r7, r6, #0 (0x0)
+00009688 5c664242  stc2l    p2, c4, [r6 + 0x108]
+0000968c 00384440  eoreqs   r4, r8, r0, asr #8
+00009690 02020200  andeq    r0, r2, #0 (0x0)
+00009694 42463a02  submi    r3, r6, #8192 (0x2000)
+00009698 42424242  submi    r4, r2, #17716740100 (0x420000004)
+*** gap of 4 bytes
+000096a0 00000800  andeq    r0, r0, r0, lsl #16
+000096a4 08080e00  stmda    r8, {r9,r10,r11}
+000096a8 3e080808  cdp2     p8, 0, c0, c8, c8 
+*** gap of 4 bytes
+000096b0 00001000  andeq    r1, r0, r0
+000096b4 10101c00  andnes   r1, r0, r0, lsl #24
+000096b8 10101010  andnes   r1, r0, r0 lsl by r0
+000096bc 000e1010  andeq    r1, lr, r0 lsl by r0
+000096c0 02020200  andeq    r0, r2, #0 (0x0)
+000096c4 0a122202  beq      0x491ed4
+000096c8 4222120e  eormi    r1, r2, #3758096384 (0xe0000000)
+*** gap of 4 bytes
+000096d0 08080e00  stmda    r8, {r9,r10,r11}
+000096d4 08080808  stmda    r8, {r3,r11}
+000096d8 70080808  andvc    r0, r8, r8, lsl #16
+*** gap of 8 bytes
+000096e4 9292fe00  addlss   pc, r2, #0 (0x0)
+000096e8 92929292  addlss   r9, r2, #39191576585 (0x920000009)
+*** gap of 8 bytes
+000096f4 42463a00  submi    r3, r6, #0 (0x0)
+000096f8 42424242  submi    r4, r2, #17716740100 (0x420000004)
+*** gap of 8 bytes
+00009704 42663c00  rsbmi    r3, r6, #0 (0x0)
+00009708 3c664242  stc2l    p2, c4, [r6 + 0x108]
+*** gap of 8 bytes
+00009714 42663e00  rsbmi    r3, r6, #0 (0x0)
+00009718 3e664242  cdp2     p2, 6, c4, c6, c2 ,2
+0000971c 00020202  andeq    r0, r2, r2, lsl #4
+*** gap of 4 bytes
+00009724 42667c00  rsbmi    r7, r6, #0 (0x0)
+00009728 5c664242  stc2l    p2, c4, [r6 + 0x108]
+0000972c 00404040  subeq    r4, r0, r0, asr #32
+*** gap of 4 bytes
+00009734 044c3c00  strbeqT  r3, [r12-3072]
+00009738 04040404  streqT   r0, [r4-1028]
+*** gap of 8 bytes
+00009744 02423c00  subeq    r3, r2, #0 (0x0)
+00009748 3c42403c  stc2l    p0, c4, [r2 + 0xf0]
+*** gap of 4 bytes
+00009750 08000000  stmda    r0, {}
+00009754 08087e08  stmda    r8, {r3,r9,r10,r11,r12,sp,lr}
+00009758 70080808  andvc    r0, r8, r8, lsl #16
+*** gap of 8 bytes
+00009764 42424200  submi    r4, r2, #0 (0x0)
+00009768 5c624242  stc2l    p2, c4, [r2 + 0x108]
+*** gap of 8 bytes
+00009774 24664200  strbcsT  r4, [r6-512]
+00009778 18183c24  ldmda    r8, {r2,r5,r10,r11,r12,sp}
+*** gap of 8 bytes
+00009784 5a818100  bpl      0x-1f96474
+00009788 24245a5a  strcsT   r5, [r4-2650]
+*** gap of 8 bytes
+00009794 18246600  stmda    r4, {r9,r10,sp,lr}
+00009798 66241818  strvsT   r1, [r4- r8, lsl #16]
+*** gap of 8 bytes
+000097a4 24444200  strbcsT  r4, [r4-512]
+000097a8 10182824  andnes   r2, r8, r4, lsr #16
+000097ac 000c0810  andeq    r0, r12, r0 lsl by r8
+*** gap of 4 bytes
+000097b4 20407e00  subcs    r7, r0, r0, lsl #28
+000097b8 7e020418  mcr      p4, 0, r0, c2, c8 
+*** gap of 4 bytes
+000097c0 08083800  stmda    r8, {r11,r12,sp}
+000097c4 08060808  stmda    r6, {r3,r11}
+000097c8 08080808  stmda    r8, {r3,r11}
+000097cc 00000030  andeq    r0, r0, r0 lsr by r0
+000097d0 08080800  stmda    r8, {r11}
+000097d4 08080808  stmda    r8, {r3,r11}
+000097d8 08080808  stmda    r8, {r3,r11}
+000097dc 00000808  andeq    r0, r0, r8, lsl #16
+000097e0 08080e00  stmda    r8, {r9,r10,r11}
+000097e4 08300808  ldmda    r0, {r3,r11}
+000097e8 08080808  stmda    r8, {r3,r11}
+000097ec 00000006  andeq    r0, r0, r6
+*** gap of 4 bytes
+000097f4 9c000000  stc2     p0, c0, [r0 + 0x0]
+000097f8 00000062  andeq    r0, r0, r2, ror #32
+*** gap of 4 bytes
+00009800 ffffffff  swi      0xffffff
+00009804 ffffffff  swi      0xffffff
+00009808 ffffffff  swi      0xffffff
+0000980c ffffffff  swi      0xffffff
+*** gap of 2032 bytes
+0000a000 00000400  andeq    r0, r0, r0, lsl #8
+0000a004 00000300  andeq    r0, r0, r0, lsl #6
+0000a008 00000400  andeq    r0, r0, r0, lsl #8
+0000a00c 00000300  andeq    r0, r0, r0, lsl #6
+*** gap of 4 bytes
+0000a014 00000018  andeq    r0, r0, r8 lsl by r0
+*** gap of 4072 bytes
+0000b000 303d6425  eorccs   r6, sp, r5, lsr #8
+0000b004 3d622562  stc2l    p5, c2, [r2 + 0x188]
+0000b008 78257830  stmda    r5, {r4,r5,r11,r12,sp,lr}
+0000b00c 6f25303d  swi      0x25303d
+0000b010 6325273d  teqvs    r5, #15990784 (0xf40000)
+0000b014 00000027  andeq    r0, r0, r7, lsr #32
+*** gap of 32 bytes
+0000b038 00000000  andeq    r0, r0, r0
